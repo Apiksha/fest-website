@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Fest</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/animate.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_container">
+            <a href="/" id="navbar_logo"> 
+                Annual Fest 2k25
+            </a>
+            <div class="navbar_toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar_menu">
+                <li class="navbar_item">
+                    <a href="/" class="navbar_links">Home</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="/events.html" class="navbar_links">Events</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="/clubs.html" class="navbar_links">Clubs</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="/conference.html" class="navbar_links">Conference</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="/gallery.html" class="navbar_links">Gallery</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="/teams.html" class="navbar_links">Teams</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="/about.html" class="navbar_links">About</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="/contact.html" class="navbar_links">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+     <div class="main">
+        <div class="main_container">
+            <div class="main_content">
+                <h1>Annual Fest SMVDU</h1>
+                <h2>2k25</h2>
+                <p id="element"></p>
+                <button class="main_btn"><a href="/">Register Here</a></button>
+            </div>
+            <div class="main_img--container">
+                <img src="./images/logo.png" alt="hero section bg" id="main-img">
+            </div>
+        </div>
+        
+
+     </div>
+
+     
+     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+     <script>
+         var typed = new Typed('#element', {
+             strings: ['Starts 30th Feb, 2025'],
+             typeSpeed: 50,
+            });
+            </script>
+     <script src="app.js"></script>
+</body>
+</html>
