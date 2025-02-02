@@ -9,11 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    </head>
+    
 </head>
 <body>
     <nav class="navbar">
         <div class="navbar_container">
-            <a href="/" id="navbar_logo"> 
+            <a href="/" id="navbar_logo" class="animate__animated animate__lightSpeedInLeft"> 
+                <img src="./images/logo_ekatva.png" alt="EKATVA Logo" id="logo" />
                 EKATVA 2k25
             </a>
             <div class="navbar_toggle" id="mobile-menu">
@@ -53,25 +58,81 @@
     <!-- Hero Section -->
      <div class="main">
         <div class="main_container">
-            <div class="main_content">
-                <h1>"Ekatava"</h1>
-                <h2>Annual Fest SMVDU</h2>
+            <div class="main_content animate__animated animate__fadeInLeft">
+                <h1>"EKATVA"</h1>
+                <h2>University Annual Fest <br> SMVDU</h2>
                 <p id="element"></p>
                 <button class="main_btn"><a href="/">Register Here</a></button>
             </div>
-            <div class="main_img--container">
-                <img src="./images/logo.png" alt="hero section bg" id="main-img">
+            <div class="main_img--container animate__animated animate__pulse infinite-swing">
+                <img class="animate__animated animate__fadeInLeft" src="./images/logo.png" alt="hero section bg" id="main-img">
             </div>
         </div>
         
+        
+    </div>
+    <div class="organizer">
+        <img src="./images/logo_ekatva.png" alt="ekatva-logo"> 
+        <div>Organized by : <br> Board of Professional Activities, SMVDU</div>
+    </div>
 
+     <!-- About Section -->
+
+     <div class="about">
+         <div class="timeline-container">
+             <h1 class="timeline-title">ABOUT</h1>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <h3>Unleash Your Inner Geek</h3>
+                  <p>Get ready to geek out and groove at Ekatva, SMVDU's Annual Fest, on February 28, 2025!</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <h3>A Whirlwind of Events</h3>
+                  <p>
+                    Explore technical events across computer science, electronics, mechanical, and more—something for every tech enthusiast!
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <h3>Brains and Beats</h3>
+                  <p>
+                    As the sun sets, the campus transforms into a vibrant cultural hub with music, dance, and performances.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <h3>Celebrate Knowledge and Creativity</h3>
+                  <p>
+                    Let’s make Ekatva'25 a memorable celebration of creativity, knowledge, and camaraderie!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
      </div>
+      
 
+
+    <!-- FOOTER -->
+    
+    <footer>
+        <p>&copy; 2025 EKATVA. All rights reserved.</p>
+    </footer>
      
      <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
      <script>
          var typed = new Typed('#element', {
-             strings: ['Starts 28th Feb, 2025'],
+             strings: ['From 28th Feb - 2nd Mar, 2025'],
              typeSpeed: 50,
             });
             </script>
