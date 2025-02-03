@@ -147,7 +147,7 @@
     display: grid;
     place-items: center;
     min-height: 100%;
-    background: hsl(0 0% 6%);
+    background: wheat;
   }
   
   html, body {
@@ -159,12 +159,12 @@
   .events {
     background: conic-gradient(
       from 180deg at 50% 70%,
-      hsla(0, 0%, 98%, 0.5) 0deg, 
-      rgba(238, 195, 45, 0.5) 72deg,  
-      rgba(236, 75, 75, 0.5) 144deg,  
-      rgba(112, 154, 185, 0.5) 216deg,  
-      rgba(77, 255, 191, 0.5) 288deg,  
-      hsla(0, 0%, 98%, 0.5) 1turn  
+      hsla(0, 0%, 98%, 0.9) 0deg, 
+      rgba(238, 195, 45, 1) 72deg,  
+      rgba(236, 75, 75, 1) 144deg,  
+      rgba(112, 154, 185, 1) 216deg,  
+      rgba(77, 255, 191, 1) 288deg,  
+      hsla(0, 0%, 98%, 0.9) 1turn  
     );
     min-height: 100vh;
     width: 100%;
@@ -232,7 +232,7 @@
       line-height: 29px;
       text-align: center;
       letter-spacing: -.01em;
-      color: #eeebee;
+      color: rgb(86, 11, 11);
       width: 50vw;
       opacity: .8;
   }
@@ -255,8 +255,9 @@
   .event-cards {
     width: 100%;
     padding: 4rem 2rem;
+    background: linear-gradient(to right, #e79f75, #D5ED9F);
     text-align: center;
-    color: #fff;
+    color: #9c4e1a;
   }
   
   /* Cards Container */
@@ -291,15 +292,15 @@
     text-align: center;
     letter-spacing: .1em;
     text-transform: uppercase;
-    color: bisque;
+    color: brown;
     opacity: .8;
-    text-shadow: 2px 2px rgb(29, 5, 107);
+    text-shadow: 2px 2px rgb(86, 11, 11);
   }
   
   .card h3 {
     font-size: 1.5rem;
     margin-top: 1rem;
-    color: aqua;
+    color:  rgb(122, 61, 34);
   }
   
   .card p {
@@ -355,19 +356,12 @@
     align-items: center;
     color:  #c16b31;
     justify-content: center;
-    /* background-color: #FBF5DD; */
+    background: linear-gradient(to right, #e79f75, #D5ED9F);
     font-weight: 500;
     position: relative; 
 }
+  #logo{
+    height: 68px;
+    margin-right: 20px; 
+  }
 
-  #logo{
-    height: 68px;
-    margin-right: 20px;
-    
-  }
-  
-  #logo{
-    height: 68px;
-    margin-right: 20px;
-    
-  }
