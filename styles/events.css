@@ -8,6 +8,136 @@
     margin: 0;
     padding: 0;
   }
+
+  /* navbar */
+  .navbar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+  
+  #navbar_logo {
+    background: linear-gradient(to top, #C84C05 1%, #D4D925 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .navbar_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+  }
+  
+  .navbar_item {
+    height: 80px;
+    font-weight: 500;
+  }
+  
+  .navbar_links {
+    color: #c16b31;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+  }
+  
+  .navbar_links:hover {
+    background: linear-gradient(to top, #FF5B00 1%, #D4D925 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .navbar_menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      right: 0;
+      width: 100%;
+      background: #131313;
+      text-align: center;
+      z-index: 99;
+      transition: all 0.5s ease;
+    }
+  
+    .navbar_menu.active {
+      display: flex;
+    }
+  
+    #navbar_logo {
+      padding-left: 25px;
+    }
+  
+    .navbar_toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+      padding-right: 0.2rem;
+    }
+  
+    .navbar_toggle .bar {
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      transition: all 0.3s ease-in-out;
+      background-color: #C84C05;
+    }
+  
+    .navbar_item {
+      width: 100%;
+    }
+  
+    .navbar_links {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+    }
+  
+    #mobile-menu.is-active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    #mobile-menu.is-active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    #mobile-menu.is-active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+  
+
   
   :root {
     --size: 20px;
@@ -17,7 +147,7 @@
     display: grid;
     place-items: center;
     min-height: 100%;
-    background: hsl(0 0% 6%);
+    background: wheat;
   }
   
   html, body {
@@ -29,12 +159,12 @@
   .events {
     background: conic-gradient(
       from 180deg at 50% 70%,
-      hsla(0, 0%, 98%, 0.5) 0deg, 
-      rgba(238, 195, 45, 0.5) 72deg,  
-      rgba(236, 75, 75, 0.5) 144deg,  
-      rgba(112, 154, 185, 0.5) 216deg,  
-      rgba(77, 255, 191, 0.5) 288deg,  
-      hsla(0, 0%, 98%, 0.5) 1turn  
+      hsla(0, 0%, 98%, 0.9) 0deg, 
+      rgba(238, 195, 45, 1) 72deg,  
+      rgba(236, 75, 75, 1) 144deg,  
+      rgba(112, 154, 185, 1) 216deg,  
+      rgba(77, 255, 191, 1) 288deg,  
+      hsla(0, 0%, 98%, 0.9) 1turn  
     );
     min-height: 100vh;
     width: 100%;
@@ -102,7 +232,7 @@
       line-height: 29px;
       text-align: center;
       letter-spacing: -.01em;
-      color: #eeebee;
+      color: rgb(86, 11, 11);
       width: 50vw;
       opacity: .8;
   }
@@ -125,8 +255,9 @@
   .event-cards {
     width: 100%;
     padding: 4rem 2rem;
+    background: linear-gradient(to right, #e79f75, #D5ED9F);
     text-align: center;
-    color: #fff;
+    color: #9c4e1a;
   }
   
   /* Cards Container */
@@ -161,15 +292,15 @@
     text-align: center;
     letter-spacing: .1em;
     text-transform: uppercase;
-    color: bisque;
+    color: brown;
     opacity: .8;
-    text-shadow: 2px 2px rgb(29, 5, 107);
+    text-shadow: 2px 2px rgb(86, 11, 11);
   }
   
   .card h3 {
     font-size: 1.5rem;
     margin-top: 1rem;
-    color: aqua;
+    color:  rgb(122, 61, 34);
   }
   
   .card p {
@@ -217,18 +348,20 @@
   }
 
   /* footer */
-  footer{
+
+  footer {
+    width: 100%;  
     height: 4rem;
     display: flex;
     align-items: center;
-    color: black;
+    color:  #c16b31;
     justify-content: center;
-    background-color: #FBF5DD;
+    background: linear-gradient(to right, #e79f75, #D5ED9F);
     font-weight: 500;
-  }
-  
+    position: relative; 
+}
+
   #logo{
     height: 68px;
-    margin-right: 20px;
-    
+    margin-right: 20px; 
   }
