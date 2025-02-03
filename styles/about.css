@@ -1,0 +1,347 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+}
+body{
+    background: radial-gradient(#1f3a47, #0b1114);
+    
+}
+
+
+.container {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about {
+    color:white;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.about:hover{
+    color:orangered;
+}
+
+.card{
+    height: auto; 
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+   
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:65px;
+    width:auto;
+    flex-wrap: wrap;
+    background-color: white; 
+     padding: 20px;
+}
+
+
+.imge img{
+    height: 300px;
+    width: 510px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.titiksha{
+    
+    width: 620px;
+    height: 300px;
+    
+}
+.titiksha h2{
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.titiksha p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size:20px;
+    margin-top: 16px;
+   
+}
+
+ 
+/* 2ndcard */
+.cards1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:65px;
+    width:auto;
+    flex-wrap: wrap;
+    background-color: white; 
+     padding: 20px;
+
+}
+
+.Ekatva{
+    margin-top: 65px;
+    width: 620px;
+    height: 300px;
+
+}
+.Ekatva h2{
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Ekatva p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size:20px;
+    margin-top: 16px;
+    
+} 
+.imgs{
+    margin-top: 65px;
+}
+
+.imgs img{
+    height: 300px;
+    width: 510px;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+img:hover{
+    transform: scale(1.05); 
+    transition: transform 0.8s ease-in-out;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+.btn1{
+    height:50px;
+    width: 150px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color:orangered;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.Explore{
+    color:white;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+.tourist{
+    display:flex;
+     justify-content: start; 
+    margin-top: 30px;
+    margin-left: 105px;
+}
+.tourist-place{
+    padding: 20px;
+}
+.tourist-place h3{
+    color:white;
+    font-size: 50px;
+}
+/* box */
+.box-wrapper {
+    display: flex;
+    justify-content:center;
+    gap:80px;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: 20px;
+      
+}
+
+
+.box {
+    width: 380px;
+    height: 260px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 6px solid black; */
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
+
+.box .image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease-in-out; 
+
+}
+.box .image:hover {
+    transform: scale(1.1);  
+}
+
+.name-box {
+    margin-top:10px;
+    height: 50px;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+   
+}
+
+
+/* footer */
+.footer{
+    height: 80px;
+    background-color: rgb(219, 221, 221);
+}
+.divider {
+    width: 100%;
+    border-top: 3px solid rgb(5, 5, 5);
+    margin-top: 70px ;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 28px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+
+
+ /* Responsive for all devices */
+@media (max-width: 768px) {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        font-size: 40px;
+        height: auto;
+        width: 100%;
+    }
+
+    .card, .cards, .cards1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+    }
+    #ids{
+        margin-top:80px;
+    }
+   
+    .imge, .imgs {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .imge img, .imgs img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .cards1 {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .titiksha, .Ekatva, .srijin, .tatva, .reassurance {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .titiksha p, .Ekatva p, .srijin p, .tatva p, .reassurance p {
+        width: 100%;
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .box-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .box {
+        width: 90%;
+        max-width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box img {
+        width: 100%;
+        max-width: 90%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .tourist, .name-box {
+        text-align: center;
+        width: 100%;
+    }
+    .name-box{
+        margin-left: 0px;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .tourist {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin-left: 5px;
+        margin-top: 20px;
+    }
+
+    .tourist-place {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tourist-place h3 {
+        font-size: 22px; 
+        margin: 0 auto; 
+        width:100%;
+    }
+}
