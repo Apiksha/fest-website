@@ -26,7 +26,7 @@ const technicalClubs = [
     },
     {
         name: "Dev Growth Club",
-        image: "https://smvdu.ac.in/wp-content/uploads/2023/10/code_club.jpg",
+        image: "./images/dev-growth.png",
         description: "Learn. Grow. Build the Future..",
     },
     {
@@ -43,6 +43,11 @@ const technicalClubs = [
         description: "Where Shabd meets ART.",
     },
     {
+        name: "Prishtbhoomi",
+        image: "./images/prishtbhoomi.png",
+        description: "Where every story finds its stage.",
+    },
+    {
       name: "Atelier Multimedia Club",
       image: "https://smvdu.ac.in/wp-content/uploads/2023/10/Atelier-New-Banner-1-1.png",
       description: "Explore the art of multimedia.",
@@ -52,6 +57,11 @@ const technicalClubs = [
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPVdrTkpfsRut57K3YDNbbNd3lcH64cz5zBA&s",
       description: "Find harmony through music.",
     },
+    {
+        name: "Fight Knight",
+        image: "./images/fight-knight.png",
+        description: "Martial arts club.",
+      },
     {
         name: "Zenith",
         image: "https://smvdu.ac.in/wp-content/uploads/2023/11/aPicsart_23-10-12_23-48-58-524-1.jpg",
@@ -65,6 +75,16 @@ const technicalClubs = [
     {
         name: "VYOM Astronomy Club",
         image: "https://smvdu.ac.in/wp-content/uploads/2024/06/Presents-1-1.png",
+        description: "Explore the Stars, Discover the Universe.",
+    },
+    {
+        name: "Yuva Tourism",
+        image: "./images/yuva-tourism.png",
+        description: "Explore the Stars, Discover the Universe.",
+    },
+    {
+        name: "Aayojan",
+        image: "./images/aayojan.png",
         description: "Explore the Stars, Discover the Universe.",
     },
   ];
