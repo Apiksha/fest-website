@@ -6,129 +6,11 @@
   <title>Titiksha Tech Fest - Contact Us</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles\contact.css">
   <link rel="stylesheet" href="./navbar.css">
-  <style>
+  
    
 
-   body {
-      font-family: 'Poppins', sans-serif;
-      background: radial-gradient(#1f3a47, #0b1114);
-      margin: 0;
-      
-    }
-   
-    .animate-left {
-      animation: fadeInLeft 0.8s ease-out;
-    }
-    .animate-form {
-      animation: slideIn 0.8s ease-out;
-    }
-    @keyframes fadeInLeft {
-      from {
-        transform: translateX(-50%);
-        opacity: 0;
-      }
-      to {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-    @keyframes slideIn {
-      from {
-        transform: translateX(50%);
-        opacity: 0;
-      }
-      to {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-    .contact-info {
-      color: #f8fafc;
-    }
-    .contact-info p {
-      font-size: 1.1rem;
-    }
-    .contact-info .phone, .contact-info .email {
-      font-size: 1rem;
-      color: #60a5fa;
-    }
-    .form-container {
-      background: rgba(31, 47, 58, 0.9); /* Dark theme background */
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      max-width: 90%; 
-      margin: 0 auto;
-    }
-    .map-container {
-      height: 400px;
-      margin-top: 40px;
-    }
-    .section-spacing {
-      margin-bottom: 3rem;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-    .social-icons img {
-      width: 50px;
-      height: 50px;
-      margin-right: 15px;
-      transition: transform 0.3s ease;
-    }
-    .social-icons img:hover {
-      transform: scale(1.2);
-    }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      border-radius: 10px;
-    }
-    .form-input {
-      width: 100%;
-      padding: 14px;
-      background-color: #1f2937;
-      color: white;
-      border: 2px solid #374151;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-    .form-input:focus {
-      border-color: #60a5fa;
-      outline: none;
-    }
-    .form-button {
-      width: 100%;
-      padding: 14px;
-      background-color: #3b82f6;
-      color: white;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-    }
-    .form-button:hover {
-      background-color: #2563eb;
-    }
-    .heading {
-      font-size: 2rem;
-      font-weight: bold;
-      color: white;
-      margin-bottom: 2rem;
-    }
-    .contact-heading {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .contact-heading img {
-      width: 200px;
-      height: 180px;
-    }
-  </style>
 </head>
 <body>
   <div id="navbar-placeholder"></div>
@@ -136,7 +18,7 @@
 
   <div class="min-h-screen flex flex-col md:flex-row justify-between items-center py-12 container">
     <!-- Left Section: Contact Info -->
-    <div class="w-full md:w-1/2 lg:w-1/3 p-8 contact-info animate-left">
+    <div class="w-full md:w-1/2 lg:w-1/3 p-8 contact-info mt-40 animate-left">
       <div class="mb-6">
         <div class="contact-heading">
           <!-- Image icon for Titiksha Tech Fest -->
@@ -209,7 +91,7 @@
       
     </div>
     
-    <script>
+    <!-- <script>
       document.getElementById("contact-form").addEventListener("submit", async function (event) {
         event.preventDefault(); // Prevent default form submission
         
@@ -235,7 +117,7 @@
           console.error("Form submission failed", error);
         }
       });
-    </script>
+    </script>  -->
     
   </div>
 
@@ -252,7 +134,8 @@
 
 
   <!-- this is for taking input from form to google sheets -->
-  <script>
+  <!-- <script>
+
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzaw2CKl-1FnLVAX61bvcCEBG8_IGpWih8Bcb46UFECXDNfsOVD_G9vJLoh-vIWgSnJxw/exec'
     const form = document.forms['submit-to-google-sheet']
   
@@ -262,6 +145,9 @@
         .then(response => console.log('Success!', response))
         .catch(error => console.error('Error!', error.message))
     })
-  </script>
+  </script>  -->
+
+  <script src="contact.js"></script>
+
 </body>
 </html>
