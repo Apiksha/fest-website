@@ -3,6 +3,7 @@ body {
     background: radial-gradient(#1f3a47, #0b1114);
     margin: 0;
     padding: 0;
+    padding-top: 4rem;
   }
  
   .animate-left {

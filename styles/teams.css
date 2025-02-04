@@ -10,13 +10,14 @@ body {
     background-color: #121212;
     color: #ffffff;
     text-align: center;
-    padding: 20px;
     min-height: 100vh;
+    padding-top: 6rem;
 }
 
 .container {
     max-width: 1200px;
     margin: 40px auto;
+    padding: 20px;
 }
 
 h1 {
