@@ -1,399 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Fest Gallery</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallary</title>
+    <link rel="stylesheet" href="./styles/gallary.css" />
+  </head>
+  <body>
+    <!-- navbar -->
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
 
-        body {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-            padding: 2rem;
-        }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    <!--   -->
 
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-            margin-bottom: 3rem;
-            font-size: 2.5rem;
-            font-weight: 600;
-            position: relative;
-            padding-bottom: 15px;
-        }
-
-        h1::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(90deg, #3498db, #2ecc71);
-            border-radius: 2px;
-        }
-
-        .gallery-filters {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 0.8rem 1.5rem;
-            border: none;
-            border-radius: 25px;
-            background: white;
-            color: #2c3e50;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .filter-btn:hover {
-            background: #3498db;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
-        }
-
-        .filter-btn.active {
-            background: #3498db;
-            color: white;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 1rem;
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            cursor: pointer;
-            transform: translateY(20px);
-            opacity: 0;
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .event-date {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.8rem;
-            z-index: 1;
-        }
-
-        .gallery-item-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
-            padding: 1.5rem;
-            color: white;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.3s ease;
-        }
-
-        .gallery-item:hover .gallery-item-overlay {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .gallery-item-title {
-            font-size: 1.2rem;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-        }
-
-        .gallery-item-description {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            line-height: 1.4;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.9);
-            z-index: 1000;
-            padding: 2rem;
-            cursor: pointer;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal-content {
-            max-width: 90%;
-            max-height: 90vh;
-            object-fit: contain;
-            border-radius: 10px;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255,255,255,0.2);
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-
-        .modal-close:hover {
-            background: rgba(255,255,255,0.3);
-            transform: rotate(90deg);
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 1rem;
-            }
-
-            h1 {
-                font-size: 2rem;
-                margin-bottom: 2rem;
-            }
-
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 1rem;
-            }
-
-            .gallery-item img {
-                height: 250px;
-            }
-
-            .filter-btn {
-                padding: 0.6rem 1.2rem;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>College Fest Gallery</h1>
-
-        <div class="gallery-filters">
-            <button class="filter-btn active" data-filter="all">All Events</button>
-            <button class="filter-btn" data-filter="cultural">Cultural</button>
-            <button class="filter-btn" data-filter="technical">Technical</button>
-            <button class="filter-btn" data-filter="sports">Sports</button>
-            <button class="filter-btn" data-filter="workshops">Workshops</button>
-        </div>
-
-        <div class="gallery-grid" id="gallery-grid"></div>
-    </div>
-
-    <div class="modal" id="imageModal">
-        <span class="modal-close">&times;</span>
-        <img class="modal-content" id="modalImage">
-    </div>
-
-    <script>
-        const galleryItems = [
-            {
-                image: "/api/placeholder/400/300",
-                title: "Classical Dance Performance",
-                description: "A mesmerizing Bharatanatyam performance by our college dance team at the annual cultural night. The event showcased traditional dance forms with modern interpretations.",
-                category: "cultural",
-                date: "Feb 15, 2024"
-            },
-            {
-                image: "/api/placeholder/400/300",
-                title: "Code Quest Hackathon",
-                description: "48-hour coding marathon where students built innovative solutions for real-world problems. Over 200 participants competed in teams of four.",
-                category: "technical",
-                date: "Jan 20, 2024"
-            },
-            {
-                image: "/api/placeholder/400/300",
-                title: "Rock Band Night",
-                description: "College bands performing their original compositions and popular covers. The night featured 6 bands and a special guest performance.",
-                category: "cultural",
-                date: "Feb 16, 2024"
-            },
-            {
-                image: "/api/placeholder/400/300",
-                title: "AI Workshop",
-                description: "Industry experts conducted a hands-on workshop on artificial intelligence and machine learning fundamentals. Students learned practical applications of AI.",
-                category: "workshops",
-                date: "Jan 25, 2024"
-            },
-            {
-                image: "/api/placeholder/400/300",
-                title: "Inter-College Cricket Finals",
-                description: "The thrilling final match between Engineering and Medical college teams. A nail-biting finish with a last-ball victory.",
-                category: "sports",
-                date: "Feb 10, 2024"
-            },
-            {
-                image: "/api/placeholder/400/300",
-                title: "Fashion Show",
-                description: "Annual fashion show where students showcased their designer collections. The event featured sustainable fashion themes.",
-                category: "cultural",
-                date: "Feb 17, 2024"
-            },
-            {
-                image: "/api/placeholder/400/300",
-                title: "Robotics Exhibition",
-                description: "Innovative robotics projects displayed by engineering students. Featured autonomous robots, drones, and smart home solutions.",
-                category: "technical",
-                date: "Jan 22, 2024"
-            },
-            {
-                image: "/api/placeholder/400/300",
-                title: "Basketball Tournament",
-                description: "Inter-department basketball championship matches with intense competition between 12 teams from different departments.",
-                category: "sports",
-                date: "Feb 12, 2024"
-            },
-            {
-                image: "/api/placeholder/400/300",
-                title: "Photography Workshop",
-                description: "Professional photographers teaching advanced photography techniques. Participants learned about composition, lighting, and post-processing.",
-                category: "workshops",
-                date: "Jan 28, 2024"
-            },
-            {
-                image: "/api/placeholder/400/300",
-                title: "Drama Club Performance",
-                description: "The college drama club's award-winning play exploring contemporary social issues through innovative storytelling.",
-                category: "cultural",
-                date: "Feb 18, 2024"
-            },
-            {
-                image: "/api/placeholder/400/300",
-                title: "Mobile App Showcase",
-                description: "Students presenting their innovative mobile applications developed during the semester. Apps focused on solving campus problems.",
-                category: "technical",
-                date: "Jan 23, 2024"
-            },
-            {
-                image: "/api/placeholder/400/300",
-                title: "Chess Championship",
-                description: "Annual chess tournament featuring college champions. The event included both rapid and blitz formats with over 50 participants.",
-                category: "sports",
-                date: "Feb 13, 2024"
-            }
-        ];
-
-        function createGalleryItem(item, index) {
-            return `
-                <div class="gallery-item" data-category="${item.category}" style="animation-delay: ${index * 0.1}s">
-                    <div class="event-date">${item.date}</div>
-                    <img src="${item.image}" alt="${item.title}" onclick="openModal(this.src)">
-                    <div class="gallery-item-overlay">
-                        <h3 class="gallery-item-title">${item.title}</h3>
-                        <p class="gallery-item-description">${item.description}</p>
-                    </div>
+  <div class="hl8"><h3 class="animate-charcter h">SpotLight</h3></div>
+      <div class="gallery" unique-script-id="w-w-dm-id">
+        <div class="responsive-container-block bigContainer">
+          <div class="responsive-container-block Container">
+            <p class="text-blk headingText" id="w-c-s-fc_p-1-dm-id">
+              EKATVA
+            </p>
+            <p class="text-blk">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus elementum magna ut duis pulvinar tincidunt vivamus adipiscing quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <div class="responsive-container-block cardContainer">
+              <div class="image-grid">
+                <div class="blockImg">
+                  <img class="mainImg" src="./images/11.jpg">
                 </div>
-            `;
-        }
-
-        function populateGallery(filter = 'all') {
-            const galleryGrid = document.getElementById('gallery-grid');
-            galleryGrid.innerHTML = '';
+                <div class="blockImg">
+                  <img class="mainImg" src="./images/13.jpg">
+                  
+                </div>
+                <div class="blockImg">
+                  <img class="mainImg" src="./images/15.jpg">
+                </div>
+                <div class="blockImg">
+                  <img class="mainImg" src="./images/16.jpg">
+                </div>
+                <div class="blockImg">
+                  <img class="mainImg" src="./images/15.jpg">
+                </div>
+                <div class="blockImg">
+                  <img class="mainImg" src="./images/15.jpg">
+                </div>
+              </div>
+            </div>
             
-            galleryItems.forEach((item, index) => {
-                if (filter === 'all' || item.category === filter) {
-                    galleryGrid.innerHTML += createGalleryItem(item, index);
-                }
-            });
-        }
+            <div class="responsive-container-block cardContainer">
+              <div class="image-grid">
+                <div class="blockImg">
+                  <img class="mainImg" src="./images/11.jpg">
+                 
+                </div>
+                <div class="blockImg">
+                  <img class="mainImg" src="./images/13.jpg">
+                  
+                </div>
+                <div class="blockImg">
+                  <img class="mainImg" src="./images/15.jpg">
+                  
+                </div>
+                <div class="blockImg">
+                  <img class="mainImg" src="./images/16.jpg">
+                </div>
+                <div class="blockImg">
+                  <img class="mainImg" src="./images/11.jpg">
+                </div>
+                <div class="blockImg">
+                  <img class="mainImg" src="./images/11.jpg">
+                </div>
+              </div>
+            </div>
 
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                populateGallery(button.getAttribute('data-filter'));
-            });
-        });
 
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImage');
-        const closeBtn = document.querySelector('.modal-close');
+          </div>
+        </div>
+      </div>
 
-        function openModal(imgSrc) {
-            modal.style.display = "flex";
-            modalImg.src = imgSrc;
-        }
-
-        closeBtn.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        modal.onclick = function(e) {
-            if (e.target === modal) {
-                modal.style.display = "none";
-            }
-        }
-
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                modal.style.display = "none";
-            }
-        });
-
-        window.onload = () => populateGallery();
-    </script>
-</body>
+  </body>
 </html>
