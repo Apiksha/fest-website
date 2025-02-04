@@ -2,12 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
 body {
-  background: linear-gradient(135deg,  
-  #0c5230 10%,   /* Deep Green */
-  #1a693a 30%,  /* Rich Green */
-  #a65422 70%,  /* Warm Brown */
-  #d37d2f 100%  /* Orange-Brown */
-);
+background: linear-gradient(to right, #e79f75, #D5ED9F);
   font-family: 'Poppins', sans-serif;
 }
 
