@@ -2,15 +2,19 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
 body {
-  background: linear-gradient(to right, #e79f75, #D5ED9F);
+background: linear-gradient(to right, #e79f75, #D5ED9F);
   font-family: 'Poppins', sans-serif;
-  padding-top: 11rem;
 }
+
+/* Navbar */
+
+
 
 
 /* ***** */
 
 img {
+  width: 100%;
   height: 280px;
   transition-duration: .3s;
   display: block;
@@ -49,6 +53,7 @@ img {
   animation: textclip 2s linear infinite;
   display: inline-block;
       font-size: 75px;
+      font-family: 'Parisienne', cursive;
 }
 
 @keyframes textclip {
@@ -63,6 +68,7 @@ img {
 .gallery * {
   font-family: Nunito, sans-serif;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .gallery .image-grid {
@@ -88,7 +94,7 @@ img {
   padding-bottom: 0px;
   padding-left: 0px;
   text-align: center;
-  color: #666666;
+  color: #1c022b;
   max-width: 1030px;
   margin-top: 0px;
   margin-right: 0px;
@@ -231,3 +237,10 @@ img {
   padding: 4%;
   box-shadow: 10px 10px 5px #888888;
 }
+.blockImg:hover {
+  transform: scale(1.05);
+  box-shadow: 10px 10px 20px #666666;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
