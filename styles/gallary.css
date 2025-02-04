@@ -1,0 +1,242 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+  background: linear-gradient(135deg,  
+  #0c5230 10%,   /* Deep Green */
+  #1a693a 30%,  /* Rich Green */
+  #a65422 70%,  /* Warm Brown */
+  #d37d2f 100%  /* Orange-Brown */
+);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+
+
+
+
+/* ***** */
+
+img {
+  width: 100%;
+  height: 280px;
+  transition-duration: .3s;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+ /* spotlight */
+
+.hl8{
+  text-align: center;
+  }
+
+/* Animation of spotlight*/
+
+.ektva{
+  font-size: 38px !important;
+}
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #0c5230 0%,   /* Deep Green */
+  #1a693a 30%,  /* Rich Green */
+  #a65422 70%,  /* Warm Brown */
+  #d37d2f 100%  /* Orange-Brown */
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 75px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+/* gallary section */
+
+.gallery * {
+  font-family: Nunito, sans-serif;
+  overflow-x: hidden;
+}
+
+.gallery .image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.gallery img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.gallery .text-blk {
+  line-height: 28px;
+  font-size: 20px;
+  font-weight: 400;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  text-align: center;
+  color: #666666;
+  max-width: 1030px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 30px;
+  margin-left: 0px;
+}
+
+.gallery .responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: flex-start;
+}
+
+.gallery .responsive-container-block.bigContainer {
+  padding-top: 10px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+}
+
+.gallery .responsive-container-block.Container {
+  max-width: 1320px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+}
+
+.gallery .text-blk.headingText {
+  font-size: 25px;
+  line-height: 34px;
+  font-weight: 700;
+  color: #d97a0b;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+}
+
+@media (max-width: 1024px) {
+  .gallery .mainImg {
+    height: 380px;
+  }
+
+  .gallery .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 770px) {
+  .gallery .responsive-container-block.Container {
+    margin-top: 80px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .gallery .responsive-container-block.cardContainer {
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+  }
+
+  .gallery .responsive-container-block.Container {
+    margin-top: 80px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    justify-content: center;
+  }
+
+  .gallery .image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery .text-blk.headingText {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery .responsive-container-block.Container {
+    margin-top: 80px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .gallery .responsive-container-block.cardContainer {
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+  }
+
+  .gallery .responsive-container-block.Container {
+    align-items: center;
+    margin-top: 80px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+  }
+
+  .gallery .text-blk.headingText {
+    text-align: center;
+  }
+
+  .gallery .image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery .responsive-container-block.cardContainer {
+    align-items: flex-start;
+  }
+
+  .gallery .responsive-container-block.bigContainer {
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+  }
+}
+
+.blockImg{
+  padding: 4%;
+  box-shadow: 10px 10px 5px #888888;
+}
