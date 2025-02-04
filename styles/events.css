@@ -147,7 +147,7 @@
     display: grid;
     place-items: center;
     min-height: 100%;
-    background: wheat;
+    background :wheat;
   }
   
   html, body {
@@ -159,21 +159,21 @@
   .events {
     background: conic-gradient(
       from 180deg at 50% 70%,
-      hsla(0, 0%, 98%, 0.9) 0deg, 
+      hsla(0, 0%, 98%) 0deg, 
       rgba(238, 195, 45, 1) 72deg,  
       rgba(236, 75, 75, 1) 144deg,  
       rgba(112, 154, 185, 1) 216deg,  
       rgba(77, 255, 191, 1) 288deg,  
-      hsla(0, 0%, 98%, 0.9) 1turn  
+      hsla(0, 0%, 98%) 1turn  
     );
     min-height: 100vh;
     width: 100%;
     height: 100vh;
     -webkit-mask:
-      radial-gradient(circle at 50% 50%, white 2px, transparent 2.5px) 50% 50% / var(--size) var(--size),
+      radial-gradient(circle at 50% 50%, white 2px, transparent 3.5px) 50% 50% / var(--size) var(--size),
       url("https://assets.codepen.io/605876/noise-mask.png") 256px 50% / 256px 256px;
             mask:
-      radial-gradient(circle at 50% 50%, white 2px, transparent 2.5px) 50% 50% / var(--size) var(--size),
+      radial-gradient(circle at 50% 50%, white 2px, transparent 3.5px) 50% 50% / var(--size) var(--size),
       url("https://assets.codepen.io/605876/noise-mask.png") 256px 50% / 256px 256px;
     -webkit-mask-composite: source-in, xor;
             mask-composite: intersect;
@@ -254,31 +254,52 @@
   /* Event Cards Section */
   .event-cards {
     width: 100%;
-    padding: 4rem 2rem;
+    padding: 2rem 1rem;
     background: linear-gradient(to right, #e79f75, #D5ED9F);
     text-align: center;
     color: #9c4e1a;
+    overflow-x: hidden;
   }
   
   /* Cards Container */
   .cards-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1100px;
-    margin: auto;
-    justify-content: center;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Smooth scrolling experience */
+    gap: 20px; /* Adds space between cards */
+    padding: 10px;
+    white-space: nowrap; /* Ensures the cards stay in a single row */
+    scrollbar-width: thin;
+    overflow-y: hidden;
+    -ms-overflow-style: none;  /* For Internet Explorer */
+    scrollbar-width: none; /* For Firefox */
+  }
+
+  .cards-container::-webkit-scrollbar {
+   display: none;
+  }
+  
+  .cards-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  
+  .cards-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
   
   /* Individual Card */
   .card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
     background: rgba(255, 255, 255, 0.1);
-    padding: 1.5rem;
+    padding: 1.0rem;
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s ease-in-out, background 0.3s ease;
-    width: calc(33.33% - 20px);
-    min-width: 250px;
+    width: calc(25% - 20px);
+    position: relative;
+    height: auto;
   }
   
   .card img {
@@ -287,31 +308,72 @@
   }
 
   .event-cards h2 {
-    margin-bottom: 2%;
-    font-size: clamp(2rem, 4vw, 4rem);
-    text-align: center;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    text-align: centre;
     letter-spacing: .1em;
     text-transform: uppercase;
     color: brown;
     opacity: .8;
-    text-shadow: 2px 2px rgb(86, 11, 11);
+    text-shadow: brown;
+    margin-bottom: 0.2rem;
   }
   
   .card h3 {
     font-size: 1.5rem;
     margin-top: 1rem;
     color:  rgb(122, 61, 34);
+    word-wrap: break-word;
+    overflow-wrap: break-word; 
+    white-space: normal; 
+    text-align: center; 
   }
   
   .card p {
     font-size: 1rem;
     opacity: 0.8;
+    word-wrap: break-word;
+    overflow-wrap: break-word; 
+    white-space: normal; 
+    text-align: center; 
   }
   
   .card:hover {
     transform: scale(1.05);
     background: rgba(255, 255, 255, 0.2);
   }
+
+  /* Register Button Styling */
+.register-btn {
+  display: block;
+  margin: 10px auto; /* Center the button */
+  padding: 10px 20px;
+  background-color: #c16b31;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.register-btn:hover {
+  background-color: #a0522d; 
+}
+
+.cropped {
+  width: 100%; 
+  height: 95%; 
+  overflow: hidden; 
+  border-radius: 10px;
+}
+
+.cropped img {
+  width: 120%; 
+  height: 200px; 
+  object-fit: cover; /* Crop excess parts */
+ 
+}
   
   /* Responsive Design: Adjust for Smaller Screens */
   @media (max-width: 768px) {
@@ -324,12 +386,13 @@
     }
   
     .cards-container {
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
     }
   
     .card {
-      width: 80%;
+      width: calc(50% - 20px);
+      min-width: 220px;
     }
   }
   
@@ -341,9 +404,15 @@
     .event-txt2 {
       font-size: 1rem;
     }
+
+    .cards-container {
+      flex-direction: row;
+      align-items: center;
+    }
   
     .card {
-      width: 90%;
+      width: calc(50% - 20px);
+      min-width: 180px;
     }
   }
 
