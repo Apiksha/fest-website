@@ -1,11 +1,11 @@
 const teamMembers = [
     {
-        name: "Dr Anil Kumar Bhardwaj",
-        image: "images/Dr Anil.jpg",
-        role: "Head Of Annual Fest",
-        email: "anil.bhardwaj@smvdu.ac.in",
+        name: "Dr Ankush Raina",
+        image: "images/AnkushRaina-1.jpeg",
+        role: "Incharge of Annual Fest",
+        email: "ankush.raina@smvdu.ac.in",
         socialLinks: {
-            linkedin: "https://www.linkedin.com/in/anil-bhardwaj-a998026/",
+            // linkedin: "https://www.linkedin.com/in/",
             twitter: "https://twitter.com",
             facebook: "https://facebook.com"
         }
@@ -21,28 +21,28 @@ const teamMembers = [
             facebook: "https://facebook.com"
         }
     },
-    {
-        name: "Dr Deepak Jain",
-        image: "images/deepak jain.jpg",
-        role: "SoB Head of Annual Fest",
-        email: "deepak.jain@smvdu.ac.in",
-        socialLinks: {
-            linkedin: "https://www.linkedin.com",
-            twitter: "https://twitter.com",
-            facebook: "https://facebook.com"
-        }
-    },
-    {
-        name: "Ramnik Sharma",
-        image: "images/ramnik.jpg",
-        role: "SoECE (21bec126)",
-        email: "21bec126@smvdu.ac.in",
-        socialLinks: {
-            linkedin: "https://www.linkedin.com",
-            twitter: "https://twitter.com",
-            facebook: "https://facebook.com"
-        }
-    },
+    // {
+    //     name: "Dr Deepak Jain",
+    //     image: "images/deepak jain.jpg",
+    //     role: "SoB Head of Annual Fest",
+    //     email: "deepak.jain@smvdu.ac.in",
+    //     socialLinks: {
+    //         linkedin: "https://www.linkedin.com",
+    //         twitter: "https://twitter.com",
+    //         facebook: "https://facebook.com"
+    //     }
+    // },
+    // {
+    //     name: "Ramnik Sharma",
+    //     image: "images/ramnik.jpg",
+    //     role: "SoECE (21bec126)",
+    //     email: "21bec126@smvdu.ac.in",
+    //     socialLinks: {
+    //         linkedin: "https://www.linkedin.com",
+    //         twitter: "https://twitter.com",
+    //         facebook: "https://facebook.com"
+    //     }
+    // },
     
 ];
 
@@ -139,12 +139,6 @@ function createTeamMemberCard(member) {
             <div class="social-links">
                 <a href="${member.socialLinks.linkedin}" target="_blank" rel="noopener noreferrer">
                     <img src="https://www.freeiconspng.com/uploads/similar-icons-with-these-tags-linkedin-pinterest-10.png" alt="LinkedIn">
-                </a>
-                <a href="${member.socialLinks.twitter}" target="_blank" rel="noopener noreferrer">
-                    <img src="https://pngimg.com/uploads/twitter/twitter_PNG2.png" alt="Twitter">
-                </a>
-                <a href="${member.socialLinks.facebook}" target="_blank" rel="noopener noreferrer">
-                    <img src="https://png.pngtree.com/element_our/sm/20180630/sm_5b37de3263964.jpg" alt="Facebook">
                 </a>
             </div>
         </div>
