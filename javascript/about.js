@@ -1,6 +1,6 @@
 const cardsData = [
     { title: "Ekatva", 
-    text: "Ekatva is a technical festival that has achieved great feats since its inception in 2008. The festival is held annually at Shri Mata Vaishno Devi University in Jammu and Kashmir, a highly technical and fully residential university that started functioning as an academic unit in 2025.", 
+    text: "Ekatva 2025 brings together the best of Titiksha (Technical Fest), Srijan (Architecture Fest), Tatva (Management Fest), and Resurgence (Cultural Fest) into one grand celebration at SMVDU. Experience a fusion of innovation, creativity, and culture with thrilling competitions, technical showcases, and electrifying performances.", 
     img: "https://img.freepik.com/premium-photo/wearing-vr-glasses-get-into-metaverse_1003347-1092.jpg" },
 
     { title: "Titiksha", 
