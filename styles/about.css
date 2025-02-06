@@ -174,7 +174,7 @@ img:hover{
     align-items: center;
     margin-top: 40px;
     margin-left: 20px;
-      
+    padding-bottom: 3rem;
 }
 
 
@@ -215,23 +215,6 @@ img:hover{
 }
 
 
-/* footer */
-.footer{
-    height: 80px;
-    background-color: rgb(219, 221, 221);
-}
-.divider {
-    width: 100%;
-    border-top: 3px solid rgb(5, 5, 5);
-    margin-top: 70px ;
-}
-.footer-bottom {
-    text-align: center;
-    margin-top: 28px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 600;
-}
-/* animation add */
 /* Animation for text sliding in from the left */
 @keyframes slideInLeft {
     from {

@@ -346,16 +346,3 @@
     display: none;
   }
 }
-
-
-
-/* Footer Styles */
-
-footer{
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #FBF5DD;
-  font-weight: 500;
-}
