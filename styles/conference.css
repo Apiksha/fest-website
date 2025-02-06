@@ -286,6 +286,11 @@ body {
     font-size: 1.4rem;
 }
 
+@media (max-width: 768px) {
+    .abs{
+        padding: 3rem 2rem;
+    }
+}
 
 
 /* Registration Details Styles */
