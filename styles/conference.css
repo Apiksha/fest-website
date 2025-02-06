@@ -1,81 +1,178 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Kumbh Sans', sans-serif;
     margin: 0;
-    padding: 20px;
     background-color: #f4f4f4;
-}
-
-h2, h3, h4 {
-    color: #000000;
+    line-height: 1.5;
 }
 
 /* Conference Name Styles */
+
 .Conf-Name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
     text-align: center;
-    margin-bottom: 20px;
+    padding-top: 5rem;
+    background-image: url(../images/smvdu.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 5px solid #365E32;
 }
 
-/* Conference Image Styles */
+.Conf-Name h1{
+    font-size: 2.4rem;
+    background-image: linear-gradient(to top, #D5ED9F 0%, #365E32 100%);
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-right: 5px solid #365E32;
+    padding: 20px;
+}
+
+.Conf-Name h2{
+    font-size: 3rem;
+    background: linear-gradient(to top, #C84C05 1%, #D4D925 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-right: 5px solid #365E32;
+    padding: 20px;
+}
+
+.Conf-Name h3{
+    font-size: 1.4rem;
+    background-image: linear-gradient(to top, #D5ED9F 0%, #365E32 100%);
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 20px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .Conf-Name{
+        flex-direction: column;
+        height: 90vh;
+    }
+
+    .Conf-Name h1{
+        border: none;
+        font-size: 2rem;
+    }
+
+    .Conf-Name h2{
+        border: none;
+        font-size: 2.3rem;
+    }
+
+    .Conf-Name h3{
+        font-size: 1.3rem;
+        text-align: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+
+
+/* Conference Image and About section Styles */
+
 .conf {
     display: flex;
-    flex-direction: row;
-    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 1.5rem;
+    padding-bottom: 1.4rem;
+    background-color: #f5f2e6;
 }
 
 .conf-image {
     flex: 2;
     text-align: center;
-    
 }
 
 .conf-img {
-    margin-top: 20px;
-    max-width: 75%;
-    max-height: 75%;
+    max-width: 80%;
+    max-height: 80%;
     padding: 20px;
 }
 
 .conf-content {
     flex: 2;
     padding: 20px;
+    color: #000;
+    font-size: 1.08rem;
 }
-/*registration button*/
+
+.conf-content p{
+    padding: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .conf{
+        flex-direction: column;
+        padding: 4rem 2rem;
+    }
+
+    .conf-img {
+        max-width: 90%;
+        max-height: 90%;
+        padding: 20px;
+    }
+}
+
+
+
+/*Registration button*/
+
+
 .registration {
-    margin-top: 20px; /* Space above the registration button */
-    text-align: center; /* Center the button */
+    background-color: #d46317;
+    color: white;
+    border: none;
+    margin: 1rem 0.2rem;
+    padding: 14px 30px;
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.3s;
 }
 
-.registration button {
-    background-color: #c75407; /* Orange background */
-    color: white; /* White text */
-    border: none; /* No border */
-    padding: 10px 20px; /* Padding for button */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+.registration:hover {
+    background-color: #fff;
+    color: #964611;
+    border: 2px solid #964611;
+    font-weight: 700;
+    
 }
 
-.registration button:hover {
-    background-color: #c75409; /* Darker orange on hover */
-}
+
 
 /*Keynote Speakers Styles*/
+
+
 .keynote-speakers {
     margin-top: 40px;
+    text-align: center;
+    padding: 2rem;
+    background-color: #F4D793;
 }
 
-h2 {
+.keynote-speakers h2, .bubbles-section h2, .abs h2{
+    font-size: 2.2rem;
+    padding-bottom: 2rem;
     text-align: center;
-    margin-bottom: 20px;
 }
+
 
 .speakers-container {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: nowrap; /* Prevent wrapping to a new line */
-    justify-content: space-around; /* Space out the cards evenly */
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    overflow-x: auto;
 }
 
 .card {
@@ -83,8 +180,7 @@ h2 {
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     margin: 10px;
-    padding: 20px;
-    width: 300px; /* Fixed width for cards */
+    padding: 30px 20px;
     text-align: center;
 }
 
@@ -96,69 +192,104 @@ h2 {
 
 .card h3 {
     margin: 10px 0 5px;
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
 }
 
 .card h4 {
     color: #363535;
     margin: 5px 0;
+    font-size: 0.9rem;
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
 }
 
 .card p {
     font-size: 14px;
     color: #363535;
+    text-align: left;
+    padding: 2.8rem 2rem;
 }
 
-/*Styles for bubbles section*/
+
+@media (max-width: 768px) {
+    .speakers-container{
+        flex-direction: column;
+    }
+}
+
+
+
+/* Organizing Committe Styles */
+
 .bubbles-section {
-    margin-top: 40px;
-    text-align: center; /* Center the section title */
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .bubbles-container {
     display: flex;
-    flex-wrap: wrap; /* Allow bubbles to wrap to the next line */
-    justify-content: center; /* Center the bubbles */
-    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
 .bubble {
-    background-color: #007BFF; /* Blue background */
-    color: white; /* White text */
-    border-radius: 50%; /* Make it circular */
-    padding: 10px; /* Padding for the bubble */
-    margin: 10px; /* Space between bubbles */
-    width: 80px; /* Fixed width for bubbles */
-    height: 80px; /* Fixed height for bubbles */
-    display: flex; /* Flexbox for centering text */
-    flex-direction: column; /* Stack image and text */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    transition: transform 0.3s; /* Smooth transition for hover effect */
+    color: #000;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, background-color 0.3s;
+    text-align: center;
+    overflow: hidden;
 }
 
 .bubble-image {
-    width: 50px; /* Image size */
-    height: 50px; /* Image size */
-    border-radius: 50%; /* Make image circular */
-    margin-bottom: 5px; /* Space between image and text */
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .bubble-text {
-    font-size: 12px; /* Smaller text size */
-    text-align: center; /* Center text */
+    font-size: 0.8rem;
+    text-align: center;
+    padding-top: 5px;
 }
 
 .bubble:hover {
-    transform: scale(1.1); /* Slightly enlarge the bubble on hover */
+    transform: scale(1.1);
 }
 
-/*CallForAbstract Styles*/
 
-.abstract{
-    text-align: center;
+@media (max-width: 768px) {
+    .bubbles-container{
+        flex-direction: row;
+    }
 }
+
+
+/*Call For Abstract Styles*/
+
+.abs{
+    padding: 4rem 12rem;
+    font-size: 1.08rem;
+    background-color: #F4D793;
+}
+
+.abs h4{
+    padding: 2rem;
+    padding-left: 2px;
+    font-size: 1.4rem;
+}
+
+
 
 /* Registration Details Styles */
+
 .reg-det {
     margin-top: 40px;
 }
@@ -175,28 +306,35 @@ table {
 th, td {
     border: 1px solid #ddd;
     padding: 10px;
-    text-align: center; /* Center-aligns the text in the table */
+    text-align: center;
 }
 
 th {
-    background-color: #c75407; /* Orange background for header */
+    background-color: #c75407;
     color: white;
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2; /* Zebra striping for table rows */
+    background-color: #f2f2f2;
 }
 
 tr:hover {
-    background-color: #ddd; /* Highlight row on hover */
+    background-color: #ddd;
 }
 
+
+
+/* Contact Us Styles */
+
 .contact {
-    margin-top: 20px;
     padding: 20px;
-    background-color: #f9f9f9; /* Light background for the contact section */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 60vw;
+    margin: 3rem auto;
+    background-color: #F4D793;
 }
 
 .contact h4 {
@@ -204,15 +342,17 @@ tr:hover {
 }
 
 .contact p {
-    margin: 5px 0;}
+    margin: 5px 0;
+}
+
 .copy-button {
-        width: 20px; /* Adjust the size as needed */
-        height: 20px; /* Adjust the size as needed */
-        cursor: pointer; /* Pointer cursor on hover */
-        margin-left: 5px; /* Space between text and image */
-        transition: transform 0.3s; /* Smooth transition for hover effect */
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        margin-left: 5px;
+        transition: transform 0.3s;
     }
     
 .copy-button:hover {
-        transform: scale(1.1); /* Slightly enlarge the image on hover */
+        transform: scale(1.1); 
     }

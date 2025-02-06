@@ -15,13 +15,14 @@ const speakers = [
     },
     {
         name: "Dr. Sayantan Mandal",
-        title: "Senior Assistant Professor, IIT Jammu",
-        description: "Dr. Mandal graduated from the Aarhus University, Denmark; and completed his PhD with Cum Laude from the University of ../images/mandal.jpegDeusto. Previously, he worked at NIEPA and University of Delhi, while coordinating a large-scale study on Teaching and Learning in Indian Higher Education system and co-authored the Indian Higher Education Report 2017 on Teaching, Learning, and Quality. At IIT Jammu, Dr. Mandal is presently coordinating two research projects on Integrating Digital Technologies with Digital Education (ITLDE) in the Jammu & Kashmir and Ladakh region, and GenAI and Teacher Competencies (ICSSR).",
+        title: "Senior Assistant Professor, <br /> IIT Jammu",
+        description: "Dr. Mandal graduated from the Aarhus University, Denmark; and completed his PhD with Cum Laude from the University of Deusto. Previously, he worked at NIEPA and University of Delhi, while coordinating a large-scale study on Teaching and Learning in Indian Higher Education system and co-authored the Indian Higher Education Report 2017 on Teaching, Learning, and Quality. At IIT Jammu, Dr. Mandal is presently coordinating two research projects on Integrating Digital Technologies with Digital Education (ITLDE) in the Jammu & Kashmir and Ladakh region, and GenAI and Teacher Competencies (ICSSR).",
         image: "../images/Dr-mandal.jpeg" // Replace with actual image URL
     }
 ];
 
 // Array of organizing committee members
+
 // Array for Chief Patron and Patron
 const chiefPatronAndPatron = [
     { role: "Chief Patron", name: "Prof. (Dr.) Pragati Kumar", title: "Vice Chancellor, SMVDU", image: "../images/prof.pragatikumar.jpg" },
@@ -44,42 +45,16 @@ const coordinators = [
     { role: "Coordinator", name: "Mr. Rishav Bali", title: "Research Scholar, SoLL, SMVDU", image: "path/to/coordinator4-image.jpg" },
     { role: "Coordinator", name: "Ms. Chakshu Gupta", title: "Research Scholar, SoLL, SMVDU", image: "../images/ChakshuGupta.jpg" }
 ]
+
+
 // Function to create bubbles
 function createBubbles() {
     const container = document.getElementById('bubbles-container');
+    if (!container) return; // Prevents errors if container is missing
 
-    chiefPatronAndPatron.forEach(member => {
-        console.log(member.image);
-        const bubble = document.createElement('div');
-        bubble.className = 'bubble';
+    const committeeMembers = [...chiefPatronAndPatron, ...chairpersons, ...coordinators]; // Merge all members
 
-        bubble.innerHTML = `
-            <img src="${member.image}" alt="${member.role}" class="bubble-image">
-            <div class="bubble-text">
-                <strong>${member.role}</strong><br>
-                ${member.name}<br>
-                <small>${member.title}</small>
-            </div>
-        `;
-        container.appendChild(bubble);
-    });
-    chairpersons.forEach(member => {
-        console.log(member.image);
-        const bubble = document.createElement('div');
-        bubble.className = 'bubble';
-
-        bubble.innerHTML = `
-            <img src="${member.image}" alt="${member.role}" class="bubble-image">
-            <div class="bubble-text">
-                <strong>${member.role}</strong><br>
-                ${member.name}<br>
-                <small>${member.title}</small>
-            </div>
-        `;
-        container.appendChild(bubble);
-    });
-    coordinators.forEach(member => {
-        console.log(member.image);
+    committeeMembers.forEach(member => {
         const bubble = document.createElement('div');
         bubble.className = 'bubble';
 
@@ -95,12 +70,13 @@ function createBubbles() {
     });
 }
 
+
 // Call the function to create bubbles
 createBubbles();
 
 
 function register() {
-    window.open('https://forms.gle/r1hHJh12C1uxGf3v6', '_blank'); // Replace with your registration page URL
+    window.open('https://forms.gle/r1hHJh12C1uxGf3v6', '_blank');
 }
 
 function copyToClipboard(text) {
