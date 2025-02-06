@@ -62,7 +62,7 @@ const websiteTeam = [
         name: "Apiksha",
         image: "images/apiksha.jpg",
         role: "SoCSE (22bcs020)",
-        position: "Home Page Head",
+        position: "Team Lead",
         socialLinks: {
             linkedin: "https://www.linkedin.com/in/apiksha-22941a256/",
             twitter: "https://twitter.com",
