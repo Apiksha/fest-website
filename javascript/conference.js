@@ -17,7 +17,7 @@ const speakers = [
         name: "Dr. Sayantan Mandal",
         title: "Senior Assistant Professor, IIT Jammu",
         description: "Dr. Mandal graduated from the Aarhus University, Denmark; and completed his PhD with Cum Laude from the University of ../images/mandal.jpegDeusto. Previously, he worked at NIEPA and University of Delhi, while coordinating a large-scale study on Teaching and Learning in Indian Higher Education system and co-authored the Indian Higher Education Report 2017 on Teaching, Learning, and Quality. At IIT Jammu, Dr. Mandal is presently coordinating two research projects on Integrating Digital Technologies with Digital Education (ITLDE) in the Jammu & Kashmir and Ladakh region, and GenAI and Teacher Competencies (ICSSR).",
-        image: "" // Replace with actual image URL
+        image: "../images/Dr-mandal.jpeg" // Replace with actual image URL
     }
 ];
 
@@ -30,7 +30,7 @@ const chiefPatronAndPatron = [
 
 // Array for Chairpersons
 const chairpersons = [
-    { role: "Chairperson", name: "Prof. Kumud Ranjan Jha", title: "Dean, Faculty of Engineering, SMVDU", image: "../images/KRjha.jpeg" },
+    { role: "Chairperson", name: "Prof. Kumud Ranjan Jha", title: "Dean, Faculty of Engineering, SMVDU", image: "../images/Dr-KRjha.jpeg" },
     { role: "Chairperson", name: "Prof. Ashutosh Vashishtha", title: "Dean, Faculty of Management, SMVDU", image: "../images/ashutoshv.jpeg" },
     { role: "Chairperson", name: "Dr. Sunil Kumar Wanchoo", title: "Dean, Faculty of Sciences, SMVDU", image: "../images/sunilWanchoo.jpeg" },
     { role: "Chairperson", name: "Dr. Amitabh V Dwivedi", title: "Dean, Faculty of Humanities & Social Sciences, SMVDU", image: "../images/Amitabh.jpeg" }
@@ -38,8 +38,8 @@ const chairpersons = [
 
 // Array for Coordinators
 const coordinators = [
-    { role: "Coordinator", name: "Dr. Sakshi Arora", title: "Associate Professor, SoCSE, SMVDU", image: "../images/dr.sakshi.jpeg" },
-    { role: "Coordinator", name: "Dr. Isha Malhotra", title: "Assistant Professor, SoLL, SMVDU", image: "../images/Dr.-IshaMalhotra.jpeg" },
+    { role: "Coordinator", name: "Dr. Sakshi Arora", title: "Associate Professor, SoCSE, SMVDU", image: "../images/dr-sakshi-arora.jpeg" },
+    { role: "Coordinator", name: "Dr. Isha Malhotra", title: "Assistant Professor, SoLL, SMVDU", image: "../images/Dr-IshaMalhotra.jpeg" },
     { role: "Coordinator", name: "Dr. Ankush Raina", title: "Assistant Professor, SoME, SMVDU", image: "../images/AnkushRaina-1.jpeg" },
     { role: "Coordinator", name: "Mr. Rishav Bali", title: "Research Scholar, SoLL, SMVDU", image: "path/to/coordinator4-image.jpg" },
     { role: "Coordinator", name: "Ms. Chakshu Gupta", title: "Research Scholar, SoLL, SMVDU", image: "../images/ChakshuGupta.jpg" }
