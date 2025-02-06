@@ -50,7 +50,7 @@ const websiteTeam = [
     {
         name: "Soumitra Rai",
         image: "images/soumitra.jpeg",
-        role: "SoCSE (22bcs031)",
+        role: "SoCSE (22bcs090)",
         position: "Coordinator",
         socialLinks: {
             linkedin: "https://www.linkedin.com/in/soumitrarai/",
