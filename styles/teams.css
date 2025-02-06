@@ -54,6 +54,7 @@ h1:hover::after {
     gap: 30px;
     justify-content: center;
     align-items: stretch;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .team-member {
