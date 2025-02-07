@@ -7,15 +7,8 @@ background: linear-gradient(to right, #e79f75, #D5ED9F);
    margin-top: 170px;
 }
 
-/* Navbar */
-
-
-
-
-/* ***** */
 
 img {
-  width: 100%;
   height: 280px;
   transition-duration: .3s;
   display: block;
