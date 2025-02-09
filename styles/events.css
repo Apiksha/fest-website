@@ -1,292 +1,326 @@
 @font-face {
-    font-family:  'Kumbh Sans', sans-serif;
-    src: url("https://assets.codepen.io/605876/GeistVF.ttf") format("truetype");
-  }
-  
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  :root {
-    --size: 20px;
-  }
-  
-  body {
-    display: grid;
-    min-height: 100%;
-    background :wheat;
-  }
-  
-  html, body {
-    min-height: 100vh;
-    overflow-y: auto; 
-    scroll-behavior: smooth; 
-  }
-  
-  .events {
-    background: conic-gradient(
-      from 180deg at 50% 70%,
-      hsla(0, 0%, 98%) 0deg, 
-      rgba(238, 195, 45, 1) 72deg,  
-      rgba(236, 75, 75, 1) 144deg,  
-      rgba(112, 154, 185, 1) 216deg,  
-      rgba(77, 255, 191, 1) 288deg,  
-      hsla(0, 0%, 98%) 1turn  
-    );
-    min-height: 100vh;
-    width: 100%;
-    height: 100vh;
-    -webkit-mask:
-      radial-gradient(circle at 50% 50%, white 2px, transparent 3.5px) 50% 50% / var(--size) var(--size),
-      url("https://assets.codepen.io/605876/noise-mask.png") 256px 50% / 256px 256px;
-            mask:
-      radial-gradient(circle at 50% 50%, white 2px, transparent 3.5px) 50% 50% / var(--size) var(--size),
-      url("https://assets.codepen.io/605876/noise-mask.png") 256px 50% / 256px 256px;
-    -webkit-mask-composite: source-in, xor;
-            mask-composite: intersect;
-    -webkit-animation: flicker 20s infinite linear;
-            animation: flicker 20s infinite linear;     
-  }
-  
-  .event-txt{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      font-family: 'Kumbh Sans', sans-serif;
-      transform: translate(-50%, -50%);
-      width: 100vw;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      z-index: 99; 
-      letter-spacing: .04em;
-  }
-  
-  h1 {
-    line-height: 1;
-    font-size: clamp(2rem, 10vw, 5rem);
-    line-height: 0px;
+  font-family:  'Kumbh Sans', sans-serif;
+  src: url("https://assets.codepen.io/605876/GeistVF.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --size: 20px;
+}
+
+body {
+  display: grid;
+  min-height: 100%;
+  background: linear-gradient(to right, #e79f75, #D5ED9F);
+}
+
+html, body {
+  overflow-y: auto; 
+  scroll-behavior: smooth; 
+  overflow-x: hidden;
+}
+
+.events {
+  background: conic-gradient(
+    from 180deg at 50% 70%,
+    hsla(0, 0%, 98%) 0deg, 
+    rgba(238, 195, 45, 1) 72deg,  
+    rgba(236, 75, 75, 1) 144deg,  
+    rgba(112, 154, 185, 1) 216deg,  
+    rgba(77, 255, 191, 1) 288deg,  
+    hsla(0, 0%, 98%) 1turn  
+  );
+  min-height: 60vh;
+  width: 100%;
+  -webkit-mask:
+    radial-gradient(circle at 50% 50%, white 2px, transparent 3.5px) 50% 50% / var(--size) var(--size),
+    url("https://assets.codepen.io/605876/noise-mask.png") 256px 50% / 256px 256px;
+          mask:
+    radial-gradient(circle at 50% 50%, white 2px, transparent 3.5px) 50% 50% / var(--size) var(--size),
+    url("https://assets.codepen.io/605876/noise-mask.png") 256px 50% / 256px 256px;
+  -webkit-mask-composite: source-in, xor;
+          mask-composite: intersect;
+  -webkit-animation: flicker 20s infinite linear;
+          animation: flicker 20s infinite linear;     
+}
+
+.event-txt{
+    position: absolute;
+    margin-top: 2rem;
+    top: 35%;
+    left: 50%;
+    font-family: 'Kumbh Sans', sans-serif;
+    transform: translate(-50%, -50%);
+    width: 100vw;
     text-align: center;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: #c16b31;
-    opacity: .8;
-    text-shadow: 2px 2px white;
-  }
-  
-  .main_btn{
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    margin: 2rem auto;
-    font-size: 1rem;
-    background-image: linear-gradient(to top, #c16b31 0%, #c16b31 100% );
-    padding: 14px 32px;
-    border: none;
-    border-radius: 4px;
-    color: black;
-    font-weight: 800;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.35s;
-    outline: none;
-  }
-  .event-txt2{
-      font-style: normal;
-      font-weight: 500;
-      font-size: 1.5rem;
-      line-height: 29px;
-      text-align: center;
-      letter-spacing: -.01em;
-      color: rgb(86, 11, 11);
-      width: 50vw;
-      opacity: .8;
-  }
-  
-  @-webkit-keyframes flicker {
-    to {
-      -webkit-mask-position: 50% 50%, 0 50%;
-              mask-position: 50% 50%, 0 50%;
-    }
-  }
-  
-  @keyframes flicker {
-    to {
-      -webkit-mask-position: 50% 50%, 0 50%;
-              mask-position: 50% 50%, 0 50%;
-    }
-  }
-  
-  /* Event Cards Section */
-  .event-cards {
-    width: 100%;
-    padding: 2rem 1rem;
-    background: linear-gradient(to right, #e79f75, #D5ED9F);
-    text-align: center;
-    color: #9c4e1a;
-    overflow-x: hidden;
-  }
-  
-  /* Cards Container */
-  .cards-container {
     display: flex;
-    overflow-x: auto; /* Enables horizontal scrolling */
-    scroll-snap-type: x mandatory; /* Smooth scrolling experience */
-    gap: 20px; /* Adds space between cards */
-    padding: 10px;
-    white-space: nowrap; /* Ensures the cards stay in a single row */
-    scrollbar-width: thin;
-    overflow-y: hidden;
-    -ms-overflow-style: none;  /* For Internet Explorer */
-    scrollbar-width: none; /* For Firefox */
-  }
+    flex-direction: column;
+    align-items: center;
+    z-index: 99; 
+    letter-spacing: .04em;
+    opacity: 0;  /* Initially hidden */
+    animation: slideInFromLeft 1s ease-out forwards;
+}
 
-  .cards-container::-webkit-scrollbar {
-   display: none;
+@keyframes slideInFromLeft {
+  from {
+      opacity: 0;
+      transform: translate(-150%, -50%);
   }
-  
-  .cards-container::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
+  to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
   }
-  
-  .cards-container::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-  
-  /* Individual Card */
-  .card {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 1.0rem;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, background 0.3s ease;
-    width: calc(25% - 20px);
-    position: relative;
-    height: auto;
-  }
-  
-  .card img {
-    width: 100%;
-    border-radius: 8px;
-  }
+}
 
-  .event-cards h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    text-align: centre;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: brown;
-    opacity: .8;
-    text-shadow: brown;
-    margin-bottom: 0.2rem;
-  }
+  h1 {
+  line-height: 1;
+  font-size: clamp(2rem, 10vw, 5rem);
+  line-height: 0px;
+  text-align: center;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: 800;
+  background-image: linear-gradient(to top, #7ea12c 0%, #2f622b 100%);
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 20px;
+  margin-bottom: 0;
+  margin-top: 18%;
   
-  .card h3 {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    color:  rgb(122, 61, 34);
-    word-wrap: break-word;
-    overflow-wrap: break-word; 
-    white-space: normal; 
-    text-align: center; 
-  }
-  
-  .card p {
-    font-size: 1rem;
-    opacity: 0.8;
-    word-wrap: break-word;
-    overflow-wrap: break-word; 
-    white-space: normal; 
-    text-align: center; 
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-    background: rgba(255, 255, 255, 0.2);
-  }
+} 
 
-  /* Register Button Styling */
-.register-btn {
-  display: block;
-  margin: 10px auto; /* Center the button */
-  padding: 10px 20px;
-  background-color: #c16b31;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.main_btn{
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  margin: 2rem auto;
   font-size: 1rem;
-  font-weight: bold;
-  transition: background-color 0.3s ease-in-out;
+  background-image: #c16b31;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 4px;
+  color: black;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s;
+  outline: none;
 }
 
-.register-btn:hover {
-  background-color: #a0522d; 
+.event-txt2{
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: -.01em;
+    color: rgb(149, 40, 43);
+    width: 50vw;
+    opacity: .8;
+    margin-bottom: 20%;
+    margin-top: 2%;
 }
 
-.cropped {
-  width: 100%; 
-  height: 95%; 
-  overflow: hidden; 
+@-webkit-keyframes flicker {
+  to {
+    -webkit-mask-position: 50% 50%, 0 50%;
+            mask-position: 50% 50%, 0 50%;
+  }
+}
+
+@keyframes flicker {
+  to {
+    -webkit-mask-position: 50% 50%, 0 50%;
+            mask-position: 50% 50%, 0 50%;
+  }
+}
+
+/* Event Cards Section */
+.event-cards {
+  width: 100%;
+  padding: 2rem 1rem;
+  background: #f5f2e6;
+  text-align: center;
+  color: #9c4e1a;
+  overflow-x: hidden;
+}
+
+/* Cards Container */
+.cards-container {
+  display: flex;
+  overflow-x: auto; 
+  scroll-snap-type: x mandatory; 
+  gap: 20px; 
+  padding: 10px;
+  white-space: nowrap; 
+  scrollbar-width: thin;
+  overflow-y: hidden;
+  -ms-overflow-style: none;  /* For Internet Explorer */
+  scrollbar-width: none; /* For Firefox */
+  margin-top: 0.1%;
+  margin-bottom: 5%;
+}
+
+.cards-container::-webkit-scrollbar {
+ display: none;
+}
+
+.cards-container::-webkit-scrollbar-thumb {
+  background: #888;
   border-radius: 10px;
 }
 
-.cropped img {
-  width: 120%; 
-  height: 200px; 
-  object-fit: cover; /* Crop excess parts */
- 
+.cards-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
-  
-  /* Responsive Design: Adjust for Smaller Screens */
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 3rem;
-    }
-  
-    .event-txt2 {
-      font-size: 1.2rem;
-    }
-  
-    .cards-container {
-      flex-direction: row;
-      align-items: center;
-    }
-  
-    .card {
-      width: calc(50% - 20px);
-      min-width: 220px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 2.5rem;
-    }
-  
-    .event-txt2 {
-      font-size: 1rem;
-    }
 
-    .cards-container {
-      flex-direction: row;
-      align-items: center;
-    }
+/* Individual Card */
+.card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background: rgba(110, 65, 20, 0.1);
+  padding: 1.0rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, background 0.3s ease;
+  width: calc(25% - 20px);
+  position: relative;
+  height: auto;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.event-cards h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  text-align: centre;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  background: linear-gradient(to top, #C84C05 1%, #D4D925 100%);
+  font-weight: bold;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color:#a34107;
+  word-wrap: break-word;
+  overflow-wrap: break-word; 
+  white-space: normal; 
+  text-align: center; 
   
-    .card {
-      width: calc(50% - 20px);
-      min-width: 180px;
-    }
+}
+
+.card p {
+  font-size: 1rem;
+  opacity: 0.8;
+  word-wrap: break-word;
+  overflow-wrap: break-word; 
+  white-space: normal; 
+  text-align: center; 
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Register Button Styling */
+.register-btn {
+display: block;
+margin: 10px auto; /* Center the button */
+padding: 10px 20px;
+background-color: #c16b31;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 1rem;
+font-weight: bold;
+transition: background-color 0.3s ease-in-out;
+}
+
+.register-btn:hover {
+background-color: #a0522d; 
+}
+
+.cropped {
+width: 100%; 
+height: 95%; 
+overflow: hidden; 
+border-radius: 10px;
+}
+
+.cropped img {
+width: 120%; 
+height: 200px; 
+object-fit: cover; /* Crop excess parts */
+
+}
+
+/* Responsive Design: Adjust for Smaller Screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
   }
 
-
-  #logo{
-    height: 68px;
-    margin-right: 20px; 
+  .event-txt2 {
+    font-size: 1.2rem;
+    font-weight: bold;
   }
+
+  .cards-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .card {
+    width: calc(50% - 20px);
+    min-width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .event-cards h2{
+    font-size: 1.5rem;;
+  }
+
+  .event-txt2 {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+
+  .cards-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%; 
+    min-width: auto; 
+  }
+}
+
+
+#logo{
+  height: 68px;
+  margin-right: 20px; 
+}
+
