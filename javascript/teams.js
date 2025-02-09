@@ -1,22 +1,11 @@
 const teamMembers = [
     {
-<<<<<<< Updated upstream
-        name: "Dr Anil Kumar Bhardwaj",
-        image: "images/Dr Anil.jpg",
-        role: "Head Of Annual Fest",
-        email: "anil.bhardwaj@smvdu.ac.in",
-        socialLinks: {
-            linkedin: "https://www.linkedin.com/in/anil-bhardwaj-a998026/",
-            twitter: "https://twitter.com",
-            facebook: "https://facebook.com"
-=======
         name: "Dr Ankush Raina",
         image: "images/AnkushRaina-1.jpeg",
         role: "BCA President",
         email: "ankush.raina@smvdu.ac.in",
         socialLinks: {
             // linkedin: "https://www.linkedin.com/in/",
->>>>>>> Stashed changes
         }
     },
     {
@@ -27,34 +16,7 @@ const teamMembers = [
         socialLinks: {
             linkedin: "https://www.linkedin.com/in/dr-mir-irfan-ul-haq-7b123640",
         }
-    },
-<<<<<<< Updated upstream
-    {
-        name: "Dr Deepak Jain",
-        image: "images/deepak jain.jpg",
-        role: "SoB Head of Annual Fest",
-        email: "deepak.jain@smvdu.ac.in",
-        socialLinks: {
-            linkedin: "https://www.linkedin.com",
-            twitter: "https://twitter.com",
-            facebook: "https://facebook.com"
-        }
-    },
-    {
-        name: "Ramnik Sharma",
-        image: "images/ramnik.jpg",
-        role: "SoECE (21bec126)",
-        email: "21bec126@smvdu.ac.in",
-        socialLinks: {
-            linkedin: "https://www.linkedin.com",
-            twitter: "https://twitter.com",
-            facebook: "https://facebook.com"
-        }
-    },
-=======
-    
->>>>>>> Stashed changes
-    
+    } 
 ];
 
 const websiteTeam = [
