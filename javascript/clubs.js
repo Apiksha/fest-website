@@ -34,6 +34,11 @@ const technicalClubs = [
         image: "https://smvdu.ac.in/wp-content/uploads/2024/09/TARANG-1.png",
         description: "Spark Ideas, Power Innovation, Explore Electronics.",
     },
+    {
+        name: "SAE Club",
+        image: "https://smvdu.ac.in/wp-content/uploads/2024/08/coverpage-1.png",
+        description: "Drive Innovation, Fuel Passion, Rev Up Your Engineering!",
+    },
   ];
   
   const culturalClubs = [
@@ -66,11 +71,6 @@ const technicalClubs = [
         name: "Zenith",
         image: "https://smvdu.ac.in/wp-content/uploads/2023/11/aPicsart_23-10-12_23-48-58-524-1.jpg",
         description: "Move. Groove. Express. Dance with Passion.",
-    },
-    {
-        name: "SAE Club",
-        image: "https://smvdu.ac.in/wp-content/uploads/2024/08/coverpage-1.png",
-        description: "Drive Innovation, Fuel Passion, Rev Up Your Engineering!",
     },
     {
         name: "VYOM Astronomy Club",

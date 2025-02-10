@@ -6,6 +6,7 @@ const teamMembers = [
         email: "ankush.raina@smvdu.ac.in",
         socialLinks: {
             // linkedin: "https://www.linkedin.com/in/",
+
         }
     },
     {
@@ -23,7 +24,7 @@ const websiteTeam = [
     {
         name: "Soumitra Rai",
         image: "images/soumitra.jpeg",
-        role: "SoCSE (22bcs031)",
+        role: "SoCSE (22bcs090)",
         position: "Coordinator",
         socialLinks: {
             linkedin: "https://www.linkedin.com/in/soumitrarai/",
@@ -33,7 +34,7 @@ const websiteTeam = [
         name: "Apiksha",
         image: "images/apiksha.jpg",
         role: "SoCSE (22bcs020)",
-        position: "Home Page Head",
+        position: "Team Lead",
         socialLinks: {
             linkedin: "https://www.linkedin.com/in/apiksha-22941a256/",
         }
@@ -179,12 +180,6 @@ function createTeamMemberCard(member) {
             <div class="social-links">
                 <a href="${member.socialLinks.linkedin}" target="_blank" rel="noopener noreferrer">
                     <img src="https://www.freeiconspng.com/uploads/similar-icons-with-these-tags-linkedin-pinterest-10.png" alt="LinkedIn">
-                </a>
-                <a href="${member.socialLinks.twitter}" target="_blank" rel="noopener noreferrer">
-                    <img src="https://pngimg.com/uploads/twitter/twitter_PNG2.png" alt="Twitter">
-                </a>
-                <a href="${member.socialLinks.facebook}" target="_blank" rel="noopener noreferrer">
-                    <img src="https://png.pngtree.com/element_our/sm/20180630/sm_5b37de3263964.jpg" alt="Facebook">
                 </a>
             </div>
         </div>

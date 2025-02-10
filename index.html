@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Annual Fest</title>
     <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/animate.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    </head>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./favicon_io/site.webmanifest">
+    <title>Ekatva 2k25 | Shri Mata Vaishno Devi University</title> 
 </head>
 <body>
     
+  <!-- Navbar -->
+
   <div id="navbar-placeholder"></div>
-  <script src="navbar.js"></script>
+  
 
-
-
-    <!-- Hero Section -->
-     <div class="main">
+  <!-- Hero Section -->
+  <div class="main">
         <div class="main_container">
             <div class="main_content animate__animated animate__fadeInLeft">
                 <h1>"EKATVA"</h1>
@@ -32,22 +34,37 @@
                 <button class="main_btn"><a href="https://lu.ma/i61rdylx">Register Here</a></button>
             </div>
             <div class="main_img--container animate__animated animate__pulse infinite-swing">
-                <img class="animate__animated animate__fadeInLeft" src="./images/logo.png" alt="hero section bg" id="main-img">
+                <a href="https://smvdu.ac.in/"><img class="animate__animated animate__fadeInLeft" src="./images/logo.png" alt="hero section bg" id="main-img"></a>
             </div>
         </div>
         
         
     </div>
-    <div class="organizer">
+
+
+    <!-- Oragnizer and About -->
+    
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="content">
+        
+      <!-- Organizer -->
+
+      <div class="organizer">
         <img src="./images/logo_ekatva.png" alt="ekatva-logo"> 
-        <div>Organized by : <br> Board of Professional Activities, SMVDU</div>
-    </div>
+        <div class="organizer-content">Organized by : <br> Board of Professional Activities (BPA)<br>
+          Shri Mata Vaishno Devi University <br>
+          Kakryal, Katra<br>
+          182320
+        </div>
+      </div>
 
-     <!-- About Section -->
+      <!-- About Section -->
 
-     <div class="about">
-         <div class="timeline-container">
-             <h1 class="timeline-title">ABOUT</h1>
+      <div class="about">
+        <div class="timeline-container">
+          <h1 class="timeline-title">ABOUT</h1>
             <div class="timeline">
               <div class="timeline-item">
                 <div class="timeline-marker"></div>
@@ -61,7 +78,7 @@
                 <div class="timeline-content">
                   <h3>A Whirlwind of Events</h3>
                   <p>
-                    Explore technical events across computer science, electronics, mechanical, and more—something for every tech enthusiast!
+                   Explore technical events across computer science, electronics, mechanical, and more—something for every tech enthusiast!
                   </p>
                 </div>
               </div>
@@ -70,7 +87,7 @@
                 <div class="timeline-content">
                   <h3>Brains and Beats</h3>
                   <p>
-                    As the sun sets, the campus transforms into a vibrant cultural hub with music, dance, and performances.
+                  As the sun sets, the campus transforms into a vibrant cultural hub with music, dance, and performances.
                   </p>
                 </div>
               </div>
@@ -85,24 +102,30 @@
               </div>
             </div>
           </div>
-          
-     </div>
-      
+         
+        </div>
 
+      </div>
 
-    <!-- FOOTER -->
-    
-    <footer>
-        <p>&copy; 2025 EKATVA. All rights reserved.</p>
-    </footer>
+     
+     <!-- Footer -->
+
+     <div id="footer-placeholder"></div>
+     
+     
+     
+     <!-- Javascript Files -->
      
      <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
      <script>
-         var typed = new Typed('#element', {
-             strings: ['From 28th Feb - 2nd Mar, 2025'],
-             typeSpeed: 50,
-            });
-            </script>
-     <script src="app.js"></script>
+       var typed = new Typed('#element', {
+         strings: ['From 28th Feb - 2nd Mar, 2025'],
+         typeSpeed: 50,
+        });
+      </script>
+     <script src="./javascript/navbar.js"></script>
+     <script src="./javascript/footer.js"></script>
+     <script src="./javascript/app.js"></script>
+
 </body>
 </html>

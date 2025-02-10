@@ -11,13 +11,14 @@ body {
     background: linear-gradient(to right, #e79f75, #D5ED9F);
     color: #ffffff;
     text-align: center;
-    padding: 20px;
     min-height: 100vh;
+    padding-top: 6rem;
 }
 
 .container {
     max-width: 1200px;
     margin: 40px auto;
+    padding: 20px;
 }
 
 h1 {
@@ -54,6 +55,7 @@ h1:hover::after {
     gap: 30px;
     justify-content: center;
     align-items: stretch;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .team-member {
