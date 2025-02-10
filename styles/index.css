@@ -1,0 +1,400 @@
+@import '../node_modules/animate.css/animate.min.css';
+
+/* General Styles */
+
+  .infinite-swing {
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-duration: 10s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+  }
+
+  body{
+    padding-top: 4.2rem;
+  }
+
+  /* Hero Section Styles */
+
+.main{
+  background-color: #141414;
+  background-image: url("../images/smvdu.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+.main_container{
+  display: grid;
+  grid-template-columns:  1fr 1fr;
+  align-items: center;
+  justify-self: center;
+  margin: 0 auto;
+  height: 90vh;
+  line-height: 1.3;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 50px;
+}
+
+.main_content h1 {
+  font-size: 3rem;
+  background-image: linear-gradient(to top, #D5ED9F 0%, #365E32 100%);
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.main_content h2 {
+  font-size: 3rem;
+  background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.main_content p{
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.main_btn{
+  font-size: 1rem;
+  background-image: linear-gradient(to top, #c75407 0%, #52a144 100% );
+  padding: 14px 32px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  margin-top: 2rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s;
+  outline: none;
+}
+
+.main_btn a{
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-decoration: none; 
+}
+
+.main_btn:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #4837ff;
+  transition: all 0.35s;
+  border-radius: 4px;
+}
+
+.main_btn:hover{
+  color: #fff;
+}
+
+.main_btn:hover:after{
+  width: 100%;
+}
+
+.main_img--container{
+  text-align: center;
+}
+
+#main-img{
+  height: 70%;
+  width: 70%;
+}
+
+@media screen and (max-width : 768px){
+  .main_container{
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 95vh;
+  }
+
+  .main_content{
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .main_content h1{
+    font-size: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .main_content h2{
+    font-size: 2rem;
+  }
+
+  .main_content p{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .main_btn{
+    padding: 12px 36px;
+    margin: 2.5rem 0;
+  }
+
+  #main-img{
+    height: 65%;
+    width: 65%;
+    padding-bottom: 3rem;
+  }
+}
+
+/* Organizer */
+
+
+
+.organizer {
+  color: #1a2e18;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55vh;
+  font-weight: 600;
+  padding: 4rem 5rem;
+  /* width: 60%; */
+  flex-wrap: wrap;
+  line-height: 1.6;
+  background-color: #FFEEA9;
+}
+
+.organizer img {
+  height: 80%;
+  margin-right: 3rem;
+}
+
+.organizer-content{
+  border-left: 4.5px solid #152913;
+  padding-left: 40px;
+}
+
+@media (max-width: 1216px) {
+  .organizer {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    font-size: 1rem;
+  }
+
+  .organizer img {
+    height: 50%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .organizer-content{
+    padding-left: 0;
+    border-left:none;
+    text-align: center;
+  }
+}
+
+
+
+
+/* About */
+.about {
+  padding: 3rem 1rem;
+}
+
+.timeline-container {
+  background-color: rgba(255, 255, 255, 0.4);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2.7px solid rgb(122, 61, 34);
+}
+
+.timeline-title {
+  text-align: center;
+  font-size: 2.7rem;
+  margin-bottom: 20px;
+  padding: 1rem;
+  background-image: linear-gradient(#87a344, #0e1b0c);
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(90deg, #d13b15, #feb47b);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+
+.timeline-item:nth-child(even) {
+  justify-content: flex-end;
+}
+
+.timeline-marker {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: #d86a2a;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  z-index: 1;
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 45%;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  text-align: left;
+}
+
+.timeline h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #a54005;
+}
+
+.timeline p {
+  margin: 10px 0 0;
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-item:nth-child(even) {
+    justify-content: center;
+  }
+
+  .timeline-content {
+    width: 80%;
+    margin-top: 10px;
+  }
+
+  .timeline-marker {
+    margin-bottom: 10px;
+  }
+
+  .timeline-title {
+    font-size: 2rem;
+  }
+
+  .timeline-container {
+    padding: 10px;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-title {
+    font-size: 1.9rem;
+    padding-bottom: 2px;
+  }
+
+  .timeline-container {
+    padding: 10px;
+    padding-top: 2px;
+  }
+
+  .timeline-marker {
+    width: 15px;
+    height: 15px;
+  }
+
+  .timeline-item {
+    margin: 15px 0;
+  }
+
+  .timeline-content {
+    width: 90%;
+    padding: 12px;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+}
+
+
+
+
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #FF5F00 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
