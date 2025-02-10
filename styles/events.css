@@ -194,6 +194,7 @@ html, body {
   width: calc(25% - 20px);
   position: relative;
   height: auto;
+  border: 1px solid black;
 }
 
 .card img {
