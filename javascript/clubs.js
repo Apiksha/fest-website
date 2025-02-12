@@ -5,6 +5,11 @@ const technicalClubs = [
       description: "Secure the Future, Defend with Code.",
     },
     {
+      name: "Google Developer Student Club",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKCkq6vAnAu1cB_ARRA4tdlYZ_XjPM0bJaTA&s",
+      description: "Build. Innovate. Connect. Grow with GDSC!",
+  },
+    {
       name: "Code Club",
       image: "https://smvdu.ac.in/wp-content/uploads/2023/10/code_club.jpg",
       description: "Embrace the challange. Embrace the code.",
@@ -13,11 +18,6 @@ const technicalClubs = [
         name: "AET Club",
         image: "https://smvdu.ac.in/wp-content/uploads/2023/10/AET-CLUB-Poster-1-1.jpg",
         description: "Automating today and the future.",
-    },
-    {
-        name: "Google Developer Student Club",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKCkq6vAnAu1cB_ARRA4tdlYZ_XjPM0bJaTA&s",
-        description: "Build. Innovate. Connect. Grow with GDSC!",
     },
     {
         name: "AI Club",
@@ -44,7 +44,7 @@ const technicalClubs = [
   const culturalClubs = [
     {
         name: "ShabdARTh",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlo_L2P7TFPeG8lqXDz1XfUoUaJjOMLbQ5zQ&s",
+        image: "../images/shabdARTh.jpeg",
         description: "Where Shabd meets ART.",
     },
     {
