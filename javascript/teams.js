@@ -227,5 +227,77 @@ function initializePage() {
     });
 }
 
+const ITEMS_PER_PAGE = 4;
+
+function createShowMoreButton(containerId, items) {
+    const button = document.createElement('button');
+    button.className = 'show-more-btn';
+    button.textContent = 'See More';
+    button.addEventListener('click', () => toggleItems(containerId, items, button));
+    return button;
+}
+
+function toggleItems(containerId, items, button) {
+    const container = document.getElementById(containerId);
+    const hiddenItems = container.querySelectorAll('.team-member.hidden');
+    
+    if (hiddenItems.length > 0) {
+        // Show hidden items
+        hiddenItems.forEach(item => item.classList.remove('hidden'));
+        button.textContent = 'See Less';
+    } else {
+        // Hide items beyond the first ITEMS_PER_PAGE
+        const allItems = container.querySelectorAll('.team-member');
+        Array.from(allItems)
+            .slice(ITEMS_PER_PAGE)
+            .forEach(item => item.classList.add('hidden'));
+        button.textContent = 'See More';
+    }
+}
+
+function initializeSection(containerId, items) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = ''; // Clear container
+    
+    // Create all cards
+    items.forEach((member, index) => {
+        const card = createTeamMemberCard(member);
+        const div = document.createElement('div');
+        div.innerHTML = card;
+        const memberElement = div.firstElementChild;
+        
+        if (index >= ITEMS_PER_PAGE) {
+            memberElement.classList.add('hidden');
+        }
+        
+        container.appendChild(memberElement);
+    });
+    
+    // Add show more button if there are more than ITEMS_PER_PAGE items
+    if (items.length > ITEMS_PER_PAGE) {
+        const button = createShowMoreButton(containerId, items);
+        container.parentElement.appendChild(button);
+    }
+}
+
+function initializePage() {
+    // Initialize each section with the new functionality
+    initializeSection('teamContainer', teamMembers);
+    initializeSection('websiteTeamContainer', websiteTeam);
+    initializeSection('prTeamContainer', prTeam);
+    initializeSection('sponsorTeamContainer', sponsorTeam);
+    initializeSection('coreTeamContainer', coreTeam);
+
+    // Add hover animations
+    document.querySelectorAll('.team-member').forEach(member => {
+        member.addEventListener('mouseenter', () => {
+            member.style.transform = 'translateY(-5px)';
+        });
+        member.addEventListener('mouseleave', () => {
+            member.style.transform = 'translateY(0)';
+        });
+    });
+}
+
 // Initialize when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', initializePage);
