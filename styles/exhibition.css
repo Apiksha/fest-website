@@ -1,0 +1,369 @@
+/* Global Styles */
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    line-height: 1.5;
+}
+
+/* Exhibit Name Section */
+.exhibit-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+    padding-top: 5rem;
+    background-image: url(../images/smvdu.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 5px solid #365E32;
+}
+
+.exhibit-name h1 {
+    font-size: 2.4rem;
+    background-image: linear-gradient(to top, #D5ED9F 0%, #365E32 100%);
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-right: 5px solid #365E32;
+    padding: 20px;
+}
+
+.exhibit-name h2 {
+    font-size: 3rem;
+    background: linear-gradient(to top, #C84C05 1%, #D4D925 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 20px;
+}
+
+.exhibit-name h3 {
+    font-size: 1.4rem;
+    background-image: linear-gradient(to top, #D5ED9F 0%, #365E32 100%);
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 20px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .exhibit-name {
+        height: auto;
+        padding: 7rem 1rem;
+        flex-direction: column;
+    }
+    .exhibit-name h1,
+    .exhibit-name h2 {
+        border: none;
+        font-size: 2rem;
+    }
+    .exhibit-name h3 {
+        font-size: 1.3rem;
+        text-align: center;
+        padding: 0 2rem;
+    }
+}
+
+/* Exhibit Section */
+.exhibit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5rem;
+}
+
+.exhibit-image {
+    flex: 1;
+    text-align: center;
+}
+
+.exhibit-img {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 20px;
+}
+
+.exhibit-content {
+    flex: 1;
+    padding: 20px;
+    color: #000;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.exhibit-content p {
+    padding: 10px 0;
+}
+
+.exhibit-content ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.exhibit-content ol li {
+    margin-bottom: 0.5rem;
+}
+
+/* Registration Button */
+.registration {
+    border: none;
+    margin: 1rem 0;
+    padding: 14px 30px;
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #fff;
+    color: #964611;
+    border: 2px solid #964611;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.registration:hover {
+    background-color: #d46317;
+    color: white;
+}
+
+/* Exhibit Themes */
+.theme-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 1rem;
+  }
+  
+  /* Theme Card Styling */
+  .theme-card {
+    flex: 1 1 calc(33.333% - 20px); /* Three cards per row, accounting for gap */
+    max-width: calc(33.333% - 20px);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 19rem;
+  }
+
+  .exhibit-themes h2{
+    text-align: center;
+  }
+  
+  /* Card Image */
+  .theme-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    height: 12rem;
+  }
+  
+  /* Card Text */
+  .theme-text {
+    padding: 1rem;
+    flex-grow: 1;
+  }
+  
+  .theme-text h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .theme-text p {
+    font-size: 1rem;
+    color: #333;
+  }
+
+
+  @media (max-width: 768px) {
+    .theme-card {
+      flex: 1 1 calc(50% - 20px);
+      max-width: calc(50% - 20px);
+    }
+  }
+  
+  /* Responsive: 1 per row on small screens */
+  @media (max-width: 480px) {
+    .theme-card {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+  
+
+/* Registration Details */
+.reg-det {
+    margin-top: 40px;
+    padding: 2rem 1.5rem;
+    background-color: #F4D793;
+}
+
+.reg-det-head {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.reg-det table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.reg-det th, 
+.reg-det td {
+    border: 0.2px solid #111010;
+    padding: 10px;
+    text-align: center;
+}
+
+.reg-det th {
+    background-color: #c75407;
+    color: white;
+}
+
+.reg-det tr{
+    background-color: #f2f2f2;
+}
+
+.reg-det tr:hover {
+    background-color: #ddd;
+}
+
+.reg-det p {
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+/* Organizing Committee - Bubbles Section */
+.bubbles-section {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.bubbles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.bubble {
+    color: #000;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, background-color 0.3s;
+    text-align: center;
+    overflow: hidden;
+}
+
+.bubble-image {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.bubble-text {
+    font-size: 0.8rem;
+    text-align: center;
+    padding-top: 5px;
+}
+
+/* Hover Effect for Bubbles */
+.bubble:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+.contact {
+    padding: 20px;
+    background-color: #F4D793;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 60vw;
+    margin: 3rem auto;
+}
+
+.contact h4 {
+    margin-bottom: 10px;
+}
+
+.contact p {
+    margin: 5px 0;
+}
+
+/* Copy Button */
+.copy-button {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+.copy-button:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .exhibit {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+    
+    .contact {
+        width: 90vw;
+    }
+}
+
+
+
+
+
+
+
+
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #6c3 50%, #FF5F00 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }

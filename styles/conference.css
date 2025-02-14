@@ -85,7 +85,7 @@ body {
     justify-content: center;
     padding: 5rem 1.5rem;
     padding-bottom: 1.4rem;
-    background-color: #f5f2e6;
+    /* background-color: #f5f2e6; */
 }
 
 .conf-image {
@@ -104,6 +104,7 @@ body {
     padding: 20px;
     color: #000;
     font-size: 1.08rem;
+    font-weight: 500;
 }
 
 .conf-content p{
@@ -130,23 +131,22 @@ body {
 
 
 .registration {
-    background-color: #d46317;
-    color: white;
     border: none;
-    margin: 1rem 0.2rem;
+    margin: 1rem 0;
     padding: 14px 30px;
     font-size: 19px;
     cursor: pointer;
     border-radius: 2px;
-    transition: background-color 0.3s;
-}
-
-.registration:hover {
     background-color: #fff;
     color: #964611;
     border: 2px solid #964611;
     font-weight: 700;
-    
+    transition: background-color 0.3s;
+}
+
+.registration:hover {
+    background-color: #d46317;
+    color: white;
 }
 
 
@@ -167,7 +167,6 @@ body {
     text-align: center;
 }
 
-
 .speakers-container {
     display: flex;
     flex-wrap: nowrap;
@@ -182,6 +181,7 @@ body {
     margin: 10px;
     padding: 30px 20px;
     text-align: center;
+    min-height: 650px;
 }
 
 .card img {
@@ -216,7 +216,36 @@ body {
     .speakers-container{
         flex-direction: column;
     }
+    .keynote-speakers{
+        padding: 0.5rem;
+        padding-top: 1.5rem;
+    }
+    .card p{
+        padding: 2rem 1rem;
+    }
 }
+
+
+/* Swiper Container */
+.swiper {
+    width: 80%;
+    padding: 2rem 0;
+    margin: auto;
+}
+
+/* Each Slide */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Optional: Customize navigation button colors */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #c75407;
+}
+
 
 
 
@@ -306,6 +335,8 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 th, td {
@@ -319,8 +350,9 @@ th {
     color: white;
 }
 
-tr:nth-child(even) {
+tr {
     background-color: #f2f2f2;
+    border: 0.5px solid black;
 }
 
 tr:hover {
@@ -361,3 +393,39 @@ tr:hover {
 .copy-button:hover {
         transform: scale(1.1); 
     }
+
+
+
+
+
+
+    .bg {
+        animation:slide 3s ease-in-out infinite alternate;
+        background-image: linear-gradient(-60deg, #6c3 50%, #FF5F00 50%);
+        bottom:0;
+        left:-50%;
+        opacity:.5;
+        position:fixed;
+        right:-50%;
+        top:0;
+        z-index:-1;
+      }
+      
+      .bg2 {
+        animation-direction:alternate-reverse;
+        animation-duration:4s;
+      }
+      
+      .bg3 {
+        animation-duration:5s;
+      }
+      
+      
+      @keyframes slide {
+        0% {
+          transform:translateX(-25%);
+        }
+        100% {
+          transform:translateX(25%);
+        }
+      }

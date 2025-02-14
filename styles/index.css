@@ -1,12 +1,10 @@
-@import '../node_modules/animate.css/animate.min.css';
+.infinite-swing {
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+  animation-duration: 10s;
+}
 
 /* General Styles */
-
-  .infinite-swing {
-    animation-iteration-count: infinite;
-    animation-delay: 1s;
-    animation-duration: 10s;
-}
 
 * {
     box-sizing: border-box;
