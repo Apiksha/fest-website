@@ -23,7 +23,7 @@ const teamMembers = [
 const websiteTeam = [
     {
         name: "Soumitra Rai",
-        image: "images/soumitra.jpeg",
+        image: "images/Soumitra.jpg",
         role: "SoCSE (22bcs090)",
         position: "Coordinator",
         socialLinks: {
@@ -43,7 +43,7 @@ const websiteTeam = [
         name: "Ipshita",
         image: "images/ipshita.jpg",
         role: "SoCSE (22bcs039)",
-        position: "Event Page Head",
+        position: "Member",
         socialLinks: {
             linkedin: "www.linkedin.com/in/ipshitapathania",
         }
@@ -52,7 +52,7 @@ const websiteTeam = [
         name: "Harshit Pathak",
         image: "images/harshit.jpeg",
         role: "SoCSE (23bcs035)",
-        position: "Team Page Head",
+        position: "Member",
         socialLinks: {
             linkedin: "https://www.linkedin.com/in/code-killer/",
         }
@@ -61,7 +61,7 @@ const websiteTeam = [
         name: "Babul Kumar",
         image: "images/babul.jpg",
         role: "SoCSE (23bcs023)",
-        position: "About Us Page Head",
+        position: "Member",
         socialLinks: {
             linkedin: "https://www.linkedin.com/in/babul-yadav1211/",
         }
@@ -70,7 +70,7 @@ const websiteTeam = [
         name: "Shivam Kumar",
         image: "images/shivam.jpeg",
         role: "SoCSE (23bcs031)",
-        position: "Gallery Page Head",
+        position: "Member",
         socialLinks: {
             linkedin: "https://www.linkedin.com/in/shivam-kumar-2b2345283/",
         }
@@ -79,7 +79,7 @@ const websiteTeam = [
         name: "Gaurav Kumar",
         image: "images/gaurav.jpeg",
         role: "SoCSE (23bcs031)",
-        position: "Contact Us Page Head",
+        position: "Member",
         socialLinks: {
             linkedin: "https://www.linkedin.com/in/gaurav85",
         }
@@ -119,6 +119,15 @@ const prTeam = [
 
 const sponsorTeam = [
     {
+        name: "Ashu Kumar",
+        image: "images/ashu.jpg",
+        role: "SoEE (22bee010)",
+        position: "Team Lead",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/anshu-kumar-4862a9252/"
+        }
+    },
+    {
         name: "Abhijeet Gupta",
         image: "images/abhijeet.jpeg",
         role: "SoCE (21bec077)",
@@ -129,20 +138,11 @@ const sponsorTeam = [
     },
     {
         name: "Anand Raj",
-        image: "images/temp_photo.webp",
+        image: "images/AnandRaj.jpg",
         role: "SoB (21ibb004)",
         position: "Team Lead",
         socialLinks: {
             linkedin: "https://www.linkedin.com/", 
-        }
-    },
-    {
-        name: "Ashu Kumar",
-        image: "images/ashu.jpg",
-        role: "SoEE (22bee010)",
-        position: "Team Lead",
-        socialLinks: {
-            linkedin: "https://www.linkedin.com/in/anshu-kumar-4862a9252/"
         }
     }
 ]
@@ -162,6 +162,15 @@ const coreTeam = [
         image: "images/ramnik.jpg",
         role: "SoECE (21bec126)",
         position: "Team Lead",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {
+        name: "Samragyee Saurya Patel",
+        image: "images/Samragyee.jpg",
+        role: "SoBT (23mbt010)",
+        position: "Member",
         socialLinks: {
             linkedin: "https://www.linkedin.com",
         }
