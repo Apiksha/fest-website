@@ -4,20 +4,28 @@ const speakers = [
         name: "Prof. Filipe Samuel Silva",
         title: "Professor, University of Minho, Portugal",
         subtitle: "CEO & Founder of Extremater Dental Solutions",
-        description: "Dr. Samuel earned his MSc and PhD, both from Minho University, Portugal. Recognized among the “World’s Top 2% Scientists 2021” by Stanford University and Elsevier, he specializes in Materials Science Engineering, Dentistry, Oral Surgery & Medicine, Metallurgy, and Mechanics. He coordinates the Laboratory of Micro Fabrication and Systems Integration within the Center for MicroElectro Mechanical Systems (CMEMS) at the university. Dr. Samuel holds five international patents, numerous publications, and six international research awards, reflecting significant global recognition in materials science and biomedical engineering.",
-        image: "../images/Silva.jpeg" // Replace with actual image URL
+        description: "Dr. Samuel earned his MSc and PhD from Minho University, Portugal. Named among “World’s Top 2% Scientists 2021” by Stanford and Elsevier, he specializes in materials science engineering, dentistry, oral surgery, metallurgy, and mechanics. He leads the CMEMS Laboratory of Micro Fabrication, holding five patents, publications, and six international awards.",
+        image: "../images/Silva.jpeg"
     },
     {
-        name: "Dr. Anuj Kumar",
-        title: "Head of Research, Rushford Business School, Switzerland",
-        description: "Dr. Kumar completed his M.Sc. at University College Dublin, Ireland, and earned his PhD from Aligarh Muslim University, India. He was also honored with the Outstanding Achiever award at MAHSA University, Malaysia. He is associated with INTI International University, Malaysia as a Research Fellow (Honorary Role). His primary areas of expertise include marketing, international business, and general management. Dr. Kumar has received several prestigious academic recognitions, including Best Researcher, Outstanding Academician, Dynamic Leader, Best Mentor, and Young Achiever awards, among others.",
-        image: "../images/Anuj.jpeg" // Replace with actual image URL
+        name: "Prof. Anil Kaul",
+        title: "Acting Vice-Chancellor,<br />IIPH-Hyderabad",
+        subtitle: "Director – Dr. Cyrus Poonawalla Centre for Infectious Diseases",
+        description: "Prof. Kaul, a distinguished physician-scientist with over 35 years of expertise in infectious diseases and women’s health, is educated in Medicine (Madras Medical College), Dentistry (King George’s Medical College, Lucknow), and Public Health Administration (University of Minnesota). His rigorous translational and operational research enhances patient outcomes while reducing healthcare costs.",
+        image: "../images/Anil-Kaul.jpg"
     },
+    {
+        name: "Prof (Dr.) Anuj Kumar",
+        title: "Head of Research, Rushford Business School, Switzerland",
+        description: "Dr. Kumar earned his M.Sc. at University College Dublin, Ireland, and his PhD from Aligarh Muslim University, India. Honored with an Outstanding Achiever award at MAHSA University, he serves as a Research Fellow at INTI International University. Specializing in marketing, international business, and management, he has received multiple prestigious awards.",
+        image: "../images/Anuj.jpeg"
+    },
+    
     {
         name: "Dr. Sayantan Mandal",
         title: "Senior Assistant Professor, <br /> IIT Jammu",
-        description: "Dr. Mandal graduated from the Aarhus University, Denmark; and completed his PhD with Cum Laude from the University of Deusto. Previously, he worked at NIEPA and University of Delhi, while coordinating a large-scale study on Teaching and Learning in Indian Higher Education system and co-authored the Indian Higher Education Report 2017 on Teaching, Learning, and Quality. At IIT Jammu, Dr. Mandal is presently coordinating two research projects on Integrating Digital Technologies with Digital Education (ITLDE) in the Jammu & Kashmir and Ladakh region, and GenAI and Teacher Competencies (ICSSR).",
-        image: "../images/Dr-mandal.jpeg" // Replace with actual image URL
+        description: "Dr. Mandal graduated from Aarhus University, Denmark and earned his PhD Cum Laude from the University of Deusto. He worked at NIEPA and University of Delhi, coordinating major studies in Indian higher education. At IIT Jammu, he leads cutting-edge, notably successful research on digital education integration and GenAI-enhanced teacher competencies.",
+        image: "../images/Dr-mandal.jpeg"
     }
 ];
 
@@ -42,7 +50,7 @@ const coordinators = [
     { role: "Coordinator", name: "Dr. Sakshi Arora", title: "Associate Professor, SoCSE, SMVDU", image: "../images/dr-sakshi-arora.jpeg" },
     { role: "Coordinator", name: "Dr. Isha Malhotra", title: "Assistant Professor, SoLL, SMVDU", image: "../images/Dr-IshaMalhotra.jpeg" },
     { role: "Coordinator", name: "Dr. Ankush Raina", title: "Assistant Professor, SoME, SMVDU", image: "../images/AnkushRaina-1.jpeg" },
-    { role: "Coordinator", name: "Mr. Rishav Bali", title: "Research Scholar, SoLL, SMVDU", image: "../images/rishav-bali.jpeg" },
+    { role: "Coordinator", name: "Mr. Rishav Bali", title: "Research Scholar, SoLL, SMVDU", image: "../images/RishavBali.jpeg" },
     { role: "Coordinator", name: "Ms. Chakshu Gupta", title: "Research Scholar, SoLL, SMVDU", image: "../images/ChakshuGupta.jpg" }
 ]
 
@@ -90,7 +98,19 @@ function copyToClipboard(text) {
 function createSpeakerCards() {
     const container = document.getElementById('speakers-container');
 
+    // (Optional) Ensure the container has the necessary Swiper classes
+    container.classList.add('swiper', 'mySwiper');
+
+    // Create the swiper-wrapper element that will contain the slides
+    const swiperWrapper = document.createElement('div');
+    swiperWrapper.className = 'swiper-wrapper';
+    container.appendChild(swiperWrapper);
+
+    // Loop through each speaker and create a slide with the card
     speakers.forEach(speaker => {
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide'; // Each slide will be one speaker
+
         const card = document.createElement('div');
         card.className = 'card';
 
@@ -106,9 +126,52 @@ function createSpeakerCards() {
             </div>
         `;
 
-        container.appendChild(card);
+        slide.appendChild(card);
+        swiperWrapper.appendChild(slide);
     });
+
+    // Optionally add pagination and navigation elements if you want them
+    const paginationDiv = document.createElement('div');
+    paginationDiv.className = 'swiper-pagination';
+    container.appendChild(paginationDiv);
+
+    const nextBtn = document.createElement('div');
+    nextBtn.className = 'swiper-button-next';
+    container.appendChild(nextBtn);
+
+    const prevBtn = document.createElement('div');
+    prevBtn.className = 'swiper-button-prev';
+    container.appendChild(prevBtn);
 }
 
-// Call the function to create cards
+// Call the function to create the speaker slides
 createSpeakerCards();
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2, // Show 2 slides on tablets
+            },
+            1024: {
+                slidesPerView: 3, // Show 3 slides on desktops
+            },
+        },
+    });
+});

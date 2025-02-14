@@ -1,12 +1,8 @@
-
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-
 body {
 background: linear-gradient(to right, #e79f75, #D5ED9F);
   font-family: 'Poppins', sans-serif;
    margin-top: 170px;
 }
-
 
 img {
   height: 280px;
