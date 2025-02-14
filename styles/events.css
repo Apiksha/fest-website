@@ -78,6 +78,10 @@ html, body {
   }
 }
 
+a {
+  text-decoration: none; 
+}
+
   h1 {
   line-height: 1;
   font-size: clamp(2rem, 10vw, 5rem);
