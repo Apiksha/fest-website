@@ -45,7 +45,7 @@ const websiteTeam = [
         role: "SoCSE (22bcs039)",
         position: "Member",
         socialLinks: {
-            linkedin: "www.linkedin.com/in/ipshitapathania",
+            linkedin: "https://www.linkedin.com/in/ipshitapathania",
         }
     },
     {
@@ -99,7 +99,7 @@ const prTeam = [
     },
     {
         name: "Sahil Singh",
-        image: "images/temp_photo.webp",
+        image: "images/sahil.jpg",
         role: "SoCSE (22bcs073)",
         position: "Coordinator",
         socialLinks: {
