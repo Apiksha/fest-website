@@ -186,3 +186,24 @@
       grid-template-columns: repeat(1, 1fr); /* Show 1 card per row on very small screens */
     }
   }
+
+  .show-more-btn {
+    background-color: #2C3E50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+.show-more-btn:hover {
+    background-color: #34495E;
+    transform: translateY(-2px);
+}
+
+.team-member.hidden {
+    display: none;
+}

@@ -23,7 +23,7 @@ const teamMembers = [
 const websiteTeam = [
     {
         name: "Soumitra Rai",
-        image: "images/soumitra.jpeg",
+        image: "images/Soumitra.jpg",
         role: "SoCSE (22bcs090)",
         position: "Coordinator",
         socialLinks: {
@@ -43,16 +43,16 @@ const websiteTeam = [
         name: "Ipshita",
         image: "images/ipshita.jpg",
         role: "SoCSE (22bcs039)",
-        position: "Event Page Head",
+        position: "Member",
         socialLinks: {
-            linkedin: "www.linkedin.com/in/ipshitapathania",
+            linkedin: "https://www.linkedin.com/in/ipshitapathania",
         }
     },
     {
         name: "Harshit Pathak",
         image: "images/harshit.jpeg",
         role: "SoCSE (23bcs035)",
-        position: "Team Page Head",
+        position: "Member",
         socialLinks: {
             linkedin: "https://www.linkedin.com/in/code-killer/",
         }
@@ -61,7 +61,7 @@ const websiteTeam = [
         name: "Babul Kumar",
         image: "images/babul.jpg",
         role: "SoCSE (23bcs023)",
-        position: "About Us Page Head",
+        position: "Member",
         socialLinks: {
             linkedin: "https://www.linkedin.com/in/babul-yadav1211/",
         }
@@ -70,7 +70,7 @@ const websiteTeam = [
         name: "Shivam Kumar",
         image: "images/shivam.jpeg",
         role: "SoCSE (23bcs031)",
-        position: "Gallery Page Head",
+        position: "Member",
         socialLinks: {
             linkedin: "https://www.linkedin.com/in/shivam-kumar-2b2345283/",
         }
@@ -79,7 +79,7 @@ const websiteTeam = [
         name: "Gaurav Kumar",
         image: "images/gaurav.jpeg",
         role: "SoCSE (23bcs031)",
-        position: "Contact Us Page Head",
+        position: "Member",
         socialLinks: {
             linkedin: "https://www.linkedin.com/in/gaurav85",
         }
@@ -99,7 +99,7 @@ const prTeam = [
     },
     {
         name: "Sahil Singh",
-        image: "images/temp_photo.webp",
+        image: "images/sahil.jpg",
         role: "SoCSE (22bcs073)",
         position: "Coordinator",
         socialLinks: {
@@ -119,6 +119,15 @@ const prTeam = [
 
 const sponsorTeam = [
     {
+        name: "Ashu Kumar",
+        image: "images/ashu.jpg",
+        role: "SoEE (22bee010)",
+        position: "Team Lead",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/anshu-kumar-4862a9252/"
+        }
+    },
+    {
         name: "Abhijeet Gupta",
         image: "images/abhijeet.jpeg",
         role: "SoCE (21bec077)",
@@ -129,20 +138,11 @@ const sponsorTeam = [
     },
     {
         name: "Anand Raj",
-        image: "images/temp_photo.webp",
+        image: "images/AnandRaj.jpg",
         role: "SoB (21ibb004)",
         position: "Team Lead",
         socialLinks: {
             linkedin: "https://www.linkedin.com/", 
-        }
-    },
-    {
-        name: "Ashu Kumar",
-        image: "images/ashu.jpg",
-        role: "SoEE (22bee010)",
-        position: "Team Lead",
-        socialLinks: {
-            linkedin: "https://www.linkedin.com/in/anshu-kumar-4862a9252/"
         }
     }
 ]
@@ -162,6 +162,15 @@ const coreTeam = [
         image: "images/ramnik.jpg",
         role: "SoECE (21bec126)",
         position: "Team Lead",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {
+        name: "Samragyee Saurya Patel",
+        image: "images/Samragyee.jpg",
+        role: "SoBT (23mbt010)",
+        position: "Member",
         socialLinks: {
             linkedin: "https://www.linkedin.com",
         }
@@ -215,6 +224,78 @@ function initializePage() {
     coreTeam.forEach(member =>{
         coreTeamContainer.innerHTML += createTeamMemberCard(member);
     });
+
+    // Add hover animations
+    document.querySelectorAll('.team-member').forEach(member => {
+        member.addEventListener('mouseenter', () => {
+            member.style.transform = 'translateY(-5px)';
+        });
+        member.addEventListener('mouseleave', () => {
+            member.style.transform = 'translateY(0)';
+        });
+    });
+}
+
+const ITEMS_PER_PAGE = 4;
+
+function createShowMoreButton(containerId, items) {
+    const button = document.createElement('button');
+    button.className = 'show-more-btn';
+    button.textContent = 'See More';
+    button.addEventListener('click', () => toggleItems(containerId, items, button));
+    return button;
+}
+
+function toggleItems(containerId, items, button) {
+    const container = document.getElementById(containerId);
+    const hiddenItems = container.querySelectorAll('.team-member.hidden');
+    
+    if (hiddenItems.length > 0) {
+        // Show hidden items
+        hiddenItems.forEach(item => item.classList.remove('hidden'));
+        button.textContent = 'See Less';
+    } else {
+        // Hide items beyond the first ITEMS_PER_PAGE
+        const allItems = container.querySelectorAll('.team-member');
+        Array.from(allItems)
+            .slice(ITEMS_PER_PAGE)
+            .forEach(item => item.classList.add('hidden'));
+        button.textContent = 'See More';
+    }
+}
+
+function initializeSection(containerId, items) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = ''; // Clear container
+    
+    // Create all cards
+    items.forEach((member, index) => {
+        const card = createTeamMemberCard(member);
+        const div = document.createElement('div');
+        div.innerHTML = card;
+        const memberElement = div.firstElementChild;
+        
+        if (index >= ITEMS_PER_PAGE) {
+            memberElement.classList.add('hidden');
+        }
+        
+        container.appendChild(memberElement);
+    });
+    
+    // Add show more button if there are more than ITEMS_PER_PAGE items
+    if (items.length > ITEMS_PER_PAGE) {
+        const button = createShowMoreButton(containerId, items);
+        container.parentElement.appendChild(button);
+    }
+}
+
+function initializePage() {
+    // Initialize each section with the new functionality
+    initializeSection('teamContainer', teamMembers);
+    initializeSection('websiteTeamContainer', websiteTeam);
+    initializeSection('prTeamContainer', prTeam);
+    initializeSection('sponsorTeamContainer', sponsorTeam);
+    initializeSection('coreTeamContainer', coreTeam);
 
     // Add hover animations
     document.querySelectorAll('.team-member').forEach(member => {
