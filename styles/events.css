@@ -64,6 +64,8 @@ html, body {
     letter-spacing: .04em;
     opacity: 0; 
     animation: slideInFromLeft 1s ease-out forwards;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 @keyframes slideInFromLeft {
@@ -135,6 +137,8 @@ a {
   text-align: center;
   color: #9c4e1a;
   overflow-x: hidden;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* Cards Container */
@@ -268,7 +272,7 @@ object-fit: cover;
   }
 
   .event-txt2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
   }
 
@@ -292,7 +296,7 @@ object-fit: cover;
   }
 
   .event-txt2 {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: bold;
   }
 
