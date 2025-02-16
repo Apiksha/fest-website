@@ -124,7 +124,7 @@ const sponsorTeam = [
         role: "SoEE (22bee010)",
         position: "Team Lead",
         socialLinks: {
-            linkedin: "https://www.linkedin.com/in/anshu-kumar-4862a9252/"
+            linkedin: "https://www.linkedin.com/in/ashu-kumar-87202b25a/"
         }
     },
     {
