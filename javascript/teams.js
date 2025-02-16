@@ -188,7 +188,7 @@ function createTeamMemberCard(member) {
             <p>${member.email || ''}</p>
             <div class="social-links">
                 <a href="${member.socialLinks.linkedin}" target="_blank" rel="noopener noreferrer">
-                    <img src="https://www.freeiconspng.com/uploads/similar-icons-with-these-tags-linkedin-pinterest-10.png" alt="LinkedIn">
+                    <img src="images/linkedin-logo.png">
                 </a>
             </div>
         </div>
