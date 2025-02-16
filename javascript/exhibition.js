@@ -6,8 +6,8 @@ const coordinators = [
   { role: "Coordinator", name: "Ms. Muskan Gupta", title: "Research Scholar, SoLL, SMVDU", image: "../images/temp_photo.webp" },
   { role: "Member", name: "Mr. Dhiraj Kumar", title: "21bcs031", image: "../images/DhirajKumar.jpg" },
   { role: "Member", name: "Ms. Samragyee Saurya Patel", title: "23mbt010", image: "../images/Samragyee.jpg" },
-  { role: "Member", name: "Ms. Asmi Salgotra", title: "23ibb017", image: "../images/temp_photo.webp" },
-  { role: "Member", name: "Mr. Abhinav Singh", title: "Student", image: "../images/temp_photo.webp" }
+  { role: "Member", name: "Ms. Asmi Salgotra", title: "23ibb017", image: "../images/asmisalgotra.jpeg" },
+  { role: "Member", name: "Mr. Abhinav Kumar", title: "Student", image: "../images/abhinavkumar.jpeg" }
 ];
 
 function copyToClipboard(text) {
