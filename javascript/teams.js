@@ -171,6 +171,156 @@ const coreTeam = [
         image: "images/Samragyee.jpg",
         role: "SoBT (23mbt010)",
         position: "Member",
+        position: "Co-Lead",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    }
+]
+
+
+const schoolTeam=[
+    {name: "Achalendra Pratap Singh",
+        image: "../images/Achalendra.jpeg",
+        role: "SoCSE (22bcs005)",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/achalendra-pratap-singh-422358222/",
+        }
+    },
+    {name: "Soumitra Rai",
+        image: "../images/Soumitra.jpg",
+        role: "SoCSE (22bcs090)",
+        position: "Ambassador",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/soumitrarai",
+        }
+    },
+    
+    {name: "Shivam Kumar",
+        image: "../images/temp_photo.webp",
+        role: "SoEE (22bee)",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/shivam-chaudhary-6428b5259/",
+        }
+    },
+    {name: "Ashu Kumar",
+        image: "../images/ashu.jpg",
+        role: "SoEE (22bee010)",
+        position: "Ambassador",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/ashu-kumar-87202b25a/",
+        }
+    },
+    {name: "Shivam",
+        image: "../images/temp_photo.webp",
+        role: "SoECE ()",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Ramnik Sharma",
+        image: "../images/ramnik.jpg",
+        role: "SoECE ()",
+        position: "Ambassador",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Arush Kattal",
+        image: "../images/temp_photo.webp",
+        role: "SoCE (21bce011)",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Bhagyadeep Sahu",
+        image: "../images/temp_photo.webp",
+        role: "SoCE (21bce065)",
+        position: "Ambassador",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Abhishek Kumar Sharma",
+        image: "../images/Abhishek.jpg",
+        role: "SoME (21bme004)",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Ayush Pati Tripathi",
+        image: "../images/temp_photo.webp",
+        role: "SoM (24bmc)",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Samragyee Saurya Patel",
+        image: "../images/Samragyee.jpg",
+        role: "SoBT (23mbt010)",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Ankita Chaurasia",
+        image: "../images/temp_photo.webp",
+        role: "SoALD (21)",
+        position: "",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Sadhvi Sharma",
+        image: "../images/temp_photo.webp",
+        role: "SoP ()",
+        position: "",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Variga Khajuria",
+        image: "../images/variga.jpeg",
+        role: "SoLL ()",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Suhani Sharma",
+        image: "../images/temp_photo.webp",
+        role: "SoE (22iba)",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Hartik Samyal",
+        image: "../images/temp_photo.webp",
+        role: "SoE (21iba)",
+        position: "Ambassador",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Vinayak Gupta",
+        image: "../images/temp_photo.webp",
+        role: "SoB ()",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Shubham Sharma",
+        image: "../images/temp_photo.webp",
+        role: "SoB ()",
+        position: "Ambassador",
         socialLinks: {
             linkedin: "https://www.linkedin.com",
         }
@@ -197,14 +347,14 @@ function createTeamMemberCard(member) {
 
 // Function to initialize the page
 function initializePage() {
-    const teamContainer = document.getElementById('teamContainer');
+    const schoolTeamContainer = document.getElementById('schoolTeamContainer');
     const websiteTeamContainer = document.getElementById('websiteTeamContainer');
     const prTeamContainer = document.getElementById('prTeamContainer');
     const sponsorTeamContainer = document.getElementById('sponsorTeamContainer');
 
     // Populate main team members
-    teamMembers.forEach(member => {
-        teamContainer.innerHTML += createTeamMemberCard(member);
+    schoolTeam.forEach(member => {
+        schoolTeamContainer.innerHTML += createTeamMemberCard(member);
     });
 
     // Populate website team members
@@ -220,7 +370,7 @@ function initializePage() {
     sponsorTeam.forEach(member =>{
         sponsorTeamContainer.innerHTML += createTeamMemberCard(member);
     });
-
+    //Populate Core Team
     coreTeam.forEach(member =>{
         coreTeamContainer.innerHTML += createTeamMemberCard(member);
     });
@@ -291,7 +441,7 @@ function initializeSection(containerId, items) {
 
 function initializePage() {
     // Initialize each section with the new functionality
-    initializeSection('teamContainer', teamMembers);
+    initializeSection('schoolTeamContainer', schoolTeam);
     initializeSection('websiteTeamContainer', websiteTeam);
     initializeSection('prTeamContainer', prTeam);
     initializeSection('sponsorTeamContainer', sponsorTeam);
