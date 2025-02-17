@@ -1,6 +1,6 @@
 const updates = [
     "Sponsor Ekatva and make a lasting impact at our annual fest! &nbsp;<a href='https://docs.google.com/forms/d/e/1FAIpQLSeS65Pgjii8HETMz_HeiQrspjxYfNu-QKi_qaUxJmOGh4ajmQ/viewform?usp=header' target='_blank'> Click Here</a>",
-    "Have a look at our Sponsorship Brochure &nbsp; <a href=../assets/SponsorshipBrochure.pdf target=_blank>Here!</a>",
+    "Have a look at our Sponsorship Brochure &nbsp; <a href=../assets/SponsorshipBrochure.pdf target=_blank> Click Here!</a>",
     "For details regarding Smart Solution Exhibition 2025 &nbsp;<a href=./exhibition.html>Click Here!</a> ",
     "Events are now live! Check out on our Luma Page  &nbsp;<a href='https://lu.ma/user/EkatvaFestSMVDU' target='_blank'> Click Here</a>"
 ];

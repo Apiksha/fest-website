@@ -187,7 +187,7 @@
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
   background: white;
   flex-grow: 1;
-  height: 50px;
+  height: 80px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -215,6 +215,10 @@
   width: 100%;
   opacity: 1;
   transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+.news-item a{
+  padding-left: 6px;
 }
 
 .fade-out {
@@ -273,17 +277,20 @@
 }
 
 @media screen and (max-width : 955px){
-  .news-header{
-    width: 6rem;
-  }
 
   .news-container{
     padding: 1rem 1.8rem;
+    flex-direction: column;
+    width: 100%;
   }
 
   .news-content{
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 40px 8px;
+    width: 100%;
+  }
+
+  .news-header{
+    width: 100%;
   }
 }
 
