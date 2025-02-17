@@ -1,31 +1,31 @@
-const teamMembers = [
-    {
-        name: "Dr Ankush Raina",
-        image: "images/AnkushRaina-1.jpeg",
-        role: "BCA President",
-        email: "ankush.raina@smvdu.ac.in",
-        socialLinks: {
-            // linkedin: "https://www.linkedin.com/in/",
+// const teamMembers = [
+//     {
+//         name: "Dr Ankush Raina",
+//         image: "images/AnkushRaina-1.jpeg",
+//         role: "BCA President",
+//         email: "ankush.raina@smvdu.ac.in",
+//         socialLinks: {
+//             // linkedin: "https://www.linkedin.com/in/",
 
-        }
-    },
-    {
-        name: "Dr Mir Irfan UI Haq",
-        image: "images/Dr Mir Irfan.jpg",
-        role: "UAF Coordinator",
-        email: "mir.irfan@smvdu.ac.in ",
-        socialLinks: {
-            linkedin: "https://www.linkedin.com/in/dr-mir-irfan-ul-haq-7b123640",
-        }
-    } 
-];
+//         }
+//     },
+//     {
+//         name: "Dr Mir Irfan UI Haq",
+//         image: "images/Dr Mir Irfan.jpg",
+//         role: "UAF Coordinator",
+//         email: "mir.irfan@smvdu.ac.in ",
+//         socialLinks: {
+//             linkedin: "https://www.linkedin.com/in/dr-mir-irfan-ul-haq-7b123640",
+//         }
+//     } 
+// ];
 
 const websiteTeam = [
     {
         name: "Soumitra Rai",
         image: "images/soumitra.jpeg",
         role: "SoCSE (22bcs090)",
-        position: "Coordinator",
+        position: "Team Lead",
         socialLinks: {
             linkedin: "https://www.linkedin.com/in/soumitrarai/",
         }
@@ -92,7 +92,7 @@ const prTeam = [
         name: "Nikhil Upadhyay",
         image: "images/nikhil.jpeg",
         role: "SoCSE (22bcs058)",
-        position: "Coordinator",
+        position: "Team Lead",
         socialLinks: {
             linkedin: "https://www.linkedin.com/in/n-upadhyay/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
         }
@@ -101,7 +101,7 @@ const prTeam = [
         name: "Sahil Singh",
         image: "images/sahil.jpg",
         role: "SoCSE (22bcs073)",
-        position: "Coordinator",
+        position: "Team Lead",
         socialLinks: {
             linkedin: "https://www.linkedin.com/",
         }
@@ -110,7 +110,7 @@ const prTeam = [
         name: "Variga Khajuria",
         image: "images/variga.jpeg",
         role: "SoLL (21ibe035)",
-        position: "Team Lead",
+        position: "Co-Lead",
         socialLinks: {
             linkedin: "https://www.linkedin.com/in/variga-khajuria-a85294189/?trk=contact-info",
         }
@@ -124,7 +124,7 @@ const sponsorTeam = [
         role: "SoCE (21bec077)",
         position: "Senior Consultant",
         socialLinks: {
-            linkedin: "https://www.linkedin.com/in/abhijeet-gupta-52b580286/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app/", 
+            linkedin: "https://www.linkedin.com/in/abhijeet-gupta-52b580286/", 
         }
     },
     {
@@ -154,7 +154,7 @@ const coreTeam = [
         role: "SoCE (21bec017)",
         position: "Team Lead",
         socialLinks: {
-            linkedin: "https://www.linkedin.com/in/astabhuja-nath-pandey-473b95339/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            linkedin: "https://www.linkedin.com/in/astabhuja-nath-pandey-473b95339/",
         }
     },
     {
@@ -165,9 +165,169 @@ const coreTeam = [
         socialLinks: {
             linkedin: "https://www.linkedin.com",
         }
+<<<<<<< Updated upstream
+=======
+    },
+    {
+        name: "Samragyee Saurya Patel",
+        image: "images/Samragyee.jpg",
+        role: "SoBT (23mbt010)",
+        position: "Co-Lead",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+>>>>>>> Stashed changes
     }
 ]
 
+
+const SchoolAmbassadorsCoordinators=[
+    {name: "Achalendra Pratap Singh",
+        image: "../images/Achalendra.jpeg",
+        role: "SoCSE (22bcs005)",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/achalendra-pratap-singh-422358222/",
+        }
+    },
+    {name: "Soumitra Rai",
+        image: "../images/Soumitra.jpg",
+        role: "SoCSE (22bcs090)",
+        position: "Ambassador",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/soumitrarai",
+        }
+    },
+    
+    {name: "Shivam Kumar",
+        image: "../images/temp_photo.webp",
+        role: "SoEE (22bee)",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/shivam-chaudhary-6428b5259/",
+        }
+    },
+    {name: "Ashu Kumar",
+        image: "../images/ashu.jpg",
+        role: "SoEE (22bee010)",
+        position: "Ambassador",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/ashu-kumar-87202b25a/",
+        }
+    },
+    {name: "Shivam",
+        image: "../images/temp_photo.webp",
+        role: "SoECE ()",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Ramnik Sharma",
+        image: "../images/ramnik.jpg",
+        role: "SoECE ()",
+        position: "Ambassador",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Arush Kattal",
+        image: "../images/temp_photo.webp",
+        role: "SoCE (21bce011)",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Bhagyadeep Sahu",
+        image: "../images/temp_photo.webp",
+        role: "SoCE (21bce065)",
+        position: "Ambassador",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Abhishek Kumar Sharma",
+        image: "../images/Abhishek.jpg",
+        role: "SoME (21bme004)",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Ayush Pati Tripathi",
+        image: "../images/temp_photo.webp",
+        role: "SoM (24bmc)",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Samragyee Saurya Patel",
+        image: "../images/Samragyee.jpg",
+        role: "SoBT (23mbt010)",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Ankita Chaurasia",
+        image: "../images/temp_photo.webp",
+        role: "SoALD (21)",
+        position: "",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Sadhvi Sharma",
+        image: "../images/temp_photo.webp",
+        role: "SoP ()",
+        position: "",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Variga Khajuria",
+        image: "../images/variga.jpeg",
+        role: "SoLL ()",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Suhani Sharma",
+        image: "../images/temp_photo.webp",
+        role: "SoE (22iba)",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Hartik Samyal",
+        image: "../images/temp_photo.webp",
+        role: "SoE (21iba)",
+        position: "Ambassador",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Vinayak Gupta",
+        image: "../images/temp_photo.webp",
+        role: "SoB ()",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    },
+    {name: "Shubham Sharma",
+        image: "../images/temp_photo.webp",
+        role: "SoB ()",
+        position: "Ambassador",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com",
+        }
+    }
+]
 // Function to create a team member card
 function createTeamMemberCard(member) {
     return `
@@ -188,15 +348,16 @@ function createTeamMemberCard(member) {
 
 // Function to initialize the page
 function initializePage() {
-    const teamContainer = document.getElementById('teamContainer');
+    // const teamContainer = document.getElementById('teamContainer');
     const websiteTeamContainer = document.getElementById('websiteTeamContainer');
     const prTeamContainer = document.getElementById('prTeamContainer');
     const sponsorTeamContainer = document.getElementById('sponsorTeamContainer');
+    const SchoolAmbassadorsCoordinators = document.getElementById('schoolTeamContainer')
 
     // Populate main team members
-    teamMembers.forEach(member => {
-        teamContainer.innerHTML += createTeamMemberCard(member);
-    });
+    // teamMembers.forEach(member => {
+    //     teamContainer.innerHTML += createTeamMemberCard(member);
+    // });
 
     // Populate website team members
     websiteTeam.forEach(member => {
@@ -211,9 +372,13 @@ function initializePage() {
     sponsorTeam.forEach(member =>{
         sponsorTeamContainer.innerHTML += createTeamMemberCard(member);
     });
-
+    //Populate Core Team Members
     coreTeam.forEach(member =>{
         coreTeamContainer.innerHTML += createTeamMemberCard(member);
+    });
+    //Populate School Team
+    SchoolAmbassadorsCoordinators.forEach(member =>{
+        schoolTeamContainer.innerHTML += createTeamMemberCard(member);
     });
 
     // Add hover animations
@@ -282,11 +447,13 @@ function initializeSection(containerId, items) {
 
 function initializePage() {
     // Initialize each section with the new functionality
-    initializeSection('teamContainer', teamMembers);
+    // initializeSection('teamContainer', teamMembers);
+
     initializeSection('websiteTeamContainer', websiteTeam);
     initializeSection('prTeamContainer', prTeam);
     initializeSection('sponsorTeamContainer', sponsorTeam);
     initializeSection('coreTeamContainer', coreTeam);
+    initializeSection('schoolTeamContainer', SchoolAmbassadorsCoordinators);
 
     // Add hover animations
     document.querySelectorAll('.team-member').forEach(member => {
