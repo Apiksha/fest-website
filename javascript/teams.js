@@ -170,9 +170,7 @@ const coreTeam = [
         name: "Samragyee Saurya Patel",
         image: "images/Samragyee.jpg",
         role: "SoBT (23mbt010)",
-<<<<<<< Updated upstream
         position: "Member",
-=======
         position: "Co-Lead",
         socialLinks: {
             linkedin: "https://www.linkedin.com",
@@ -181,7 +179,7 @@ const coreTeam = [
 ]
 
 
-const SchoolAmbassadorsCoordinators=[
+const schoolTeam=[
     {name: "Achalendra Pratap Singh",
         image: "../images/Achalendra.jpeg",
         role: "SoCSE (22bcs005)",
@@ -323,7 +321,6 @@ const SchoolAmbassadorsCoordinators=[
         image: "../images/temp_photo.webp",
         role: "SoB ()",
         position: "Ambassador",
->>>>>>> Stashed changes
         socialLinks: {
             linkedin: "https://www.linkedin.com",
         }
@@ -350,14 +347,14 @@ function createTeamMemberCard(member) {
 
 // Function to initialize the page
 function initializePage() {
-    const teamContainer = document.getElementById('teamContainer');
+    const schoolTeamContainer = document.getElementById('schoolTeamContainer');
     const websiteTeamContainer = document.getElementById('websiteTeamContainer');
     const prTeamContainer = document.getElementById('prTeamContainer');
     const sponsorTeamContainer = document.getElementById('sponsorTeamContainer');
 
     // Populate main team members
-    teamMembers.forEach(member => {
-        teamContainer.innerHTML += createTeamMemberCard(member);
+    schoolTeam.forEach(member => {
+        schoolTeamContainer.innerHTML += createTeamMemberCard(member);
     });
 
     // Populate website team members
@@ -373,7 +370,7 @@ function initializePage() {
     sponsorTeam.forEach(member =>{
         sponsorTeamContainer.innerHTML += createTeamMemberCard(member);
     });
-
+    //Populate Core Team
     coreTeam.forEach(member =>{
         coreTeamContainer.innerHTML += createTeamMemberCard(member);
     });
@@ -444,7 +441,7 @@ function initializeSection(containerId, items) {
 
 function initializePage() {
     // Initialize each section with the new functionality
-    initializeSection('teamContainer', teamMembers);
+    initializeSection('schoolTeamContainer', schoolTeam);
     initializeSection('websiteTeamContainer', websiteTeam);
     initializeSection('prTeamContainer', prTeam);
     initializeSection('sponsorTeamContainer', sponsorTeam);
