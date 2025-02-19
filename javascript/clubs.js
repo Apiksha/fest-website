@@ -4,20 +4,20 @@ const technicalClubs = [
       image: "./images/null.jpeg",
       description: "Secure the Future, Defend with Code.",
     },
-    {
-      name: "Google Developer Student Club",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKCkq6vAnAu1cB_ARRA4tdlYZ_XjPM0bJaTA&s",
-      description: "Build. Innovate. Connect. Grow with GDSC!",
-  },
+  //   {
+  //     name: "Google Developer Student Club",
+  //     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKCkq6vAnAu1cB_ARRA4tdlYZ_XjPM0bJaTA&s",
+  //     description: "Build. Innovate. Connect. Grow with GDSC!",
+  // },
     {
       name: "Code Club",
       image: "https://smvdu.ac.in/wp-content/uploads/2023/10/code_club.jpg",
       description: "Embrace the challange. Embrace the code.",
     },
     {
-        name: "AET Club",
-        image: "https://smvdu.ac.in/wp-content/uploads/2023/10/AET-CLUB-Poster-1-1.jpg",
-        description: "Automating today and the future.",
+        name: "Dev Growth Club",
+        image: "./images/dev-growth.png",
+        description: "Learn. Grow. Build the Future..",
     },
     {
         name: "AI Club",
@@ -25,10 +25,10 @@ const technicalClubs = [
         description: "Think AI, Build Future, Stay Ahead.",
     },
     {
-        name: "Dev Growth Club",
-        image: "./images/dev-growth.png",
-        description: "Learn. Grow. Build the Future..",
-    },
+        name: "AET Club",
+        image: "https://smvdu.ac.in/wp-content/uploads/2023/10/AET-CLUB-Poster-1-1.jpg",
+        description: "Automating today and the future.",
+    },  
     {
         name: "Tarang",
         image: "https://smvdu.ac.in/wp-content/uploads/2024/09/TARANG-1.png",
@@ -39,6 +39,11 @@ const technicalClubs = [
         image: "https://smvdu.ac.in/wp-content/uploads/2024/08/coverpage-1.png",
         description: "Drive Innovation, Fuel Passion, Rev Up Your Engineering!",
     },
+    {
+      name: "Young Economist Club",
+      image: "./images/yec.png",
+      description: "Artha Vidya Samaj: Connecting Ideas Creating Impact!"
+    }
   ];
   
   const culturalClubs = [
@@ -85,7 +90,7 @@ const technicalClubs = [
     {
         name: "Aayojan",
         image: "./images/aayojan.png",
-        description: "Explore the Stars, Discover the Universe.",
+        description: "Where ideas meet execution.",
     },
   ];
   

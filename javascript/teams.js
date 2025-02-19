@@ -245,6 +245,16 @@ const schoolTeam=[
             linkedin: "https://www.linkedin.com",
         }
     },
+    {
+        name: "Subham Kumar Singh",
+        image: "../images/subham.jpeg",
+        role: "SoCE (22bce036)",
+        position: "Coordinator",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/subham--singh",
+        }
+
+    },
     {name: "Abhishek Kumar Sharma",
         image: "../images/Abhishek.jpg",
         role: "SoME (21bme004)",
