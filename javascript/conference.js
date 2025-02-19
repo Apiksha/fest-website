@@ -41,6 +41,8 @@ const chiefPatronAndPatron = [
 const chairpersons = [
     { role: "Chairperson", name: "Prof. Kumud Ranjan Jha", title: "Dean, Faculty of Engineering, SMVDU", image: "../images/Dr-KRjha.jpeg" },
     { role: "Chairperson", name: "Prof. Ashutosh Vashishtha", title: "Dean, Faculty of Management, SMVDU", image: "../images/ashutoshv.jpeg" },
+    {role: "Chairperson", name: "Prof. R.K. Mishra", title:"Dean, Student Welfare, SMVDU", image:"https://smvdu.ac.in/wp-content/uploads/2022/06/photo-400x403.jpg"},
+    {role: "Chairperson", name: "Prof. A.K. Das", title:"Dean, Research and Development, SMVDU", image:"https://smvdu.ac.in/wp-content/uploads/2021/06/22032019_akdas-1.jpg"},
     { role: "Chairperson", name: "Dr. Sunil Kumar Wanchoo", title: "Dean, Faculty of Sciences, SMVDU", image: "../images/sunilWanchoo.jpeg" },
     { role: "Chairperson", name: "Dr. Amitabh V Dwivedi", title: "Dean, Faculty of Humanities & Social Sciences, SMVDU", image: "../images/Amitabh.jpeg" }
 ];
@@ -48,6 +50,7 @@ const chairpersons = [
 // Array for Coordinators
 const coordinators = [
     { role: "Coordinator", name: "Dr. Sakshi Arora", title: "Associate Professor, SoCSE, SMVDU", image: "../images/dr-sakshi-arora.jpeg" },
+    { role: "Coordinator", name: "Dr. Sanjeev Anand", title:"Associate Professor, SoEM, SMVDU", image:"https://smvdu.ac.in/wp-content/uploads/2022/06/sanjeevAnand.jpg"},
     { role: "Coordinator", name: "Dr. Isha Malhotra", title: "Assistant Professor, SoLL, SMVDU", image: "../images/Dr-IshaMalhotra.jpeg" },
     { role: "Coordinator", name: "Dr. Ankush Raina", title: "Assistant Professor, SoME, SMVDU", image: "../images/AnkushRaina-1.jpeg" },
     { role: "Coordinator", name: "Mr. Rishav Bali", title: "Research Scholar, SoLL, SMVDU", image: "../images/RishavBali.jpeg" },

@@ -358,7 +358,10 @@ tr {
 tr:hover {
     background-color: #ddd;
 }
-
+.tab-note{
+    text-align: center;
+    margin-top: 20px;
+}
 
 
 /* Contact Us Styles */
