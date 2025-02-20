@@ -59,7 +59,7 @@ const websiteTeam = [
     },
     {
         name: "Babul Kumar",
-        image: "images/babul.jpg",
+        image: "images/babul2.jpg",
         role: "SoCSE (23bcs023)",
         position: "Member",
         socialLinks: {
