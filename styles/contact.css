@@ -1,3 +1,36 @@
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #FF5F00 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+
+
 body {
     font-family: 'Poppins', sans-serif;
     background: radial-gradient(#1f3a47, #0b1114);
@@ -43,10 +76,11 @@ body {
     color: #60a5fa;
   }
   .form-container {
-    background: rgba(31, 47, 58, 0.9); /* Dark theme background */
+    /* background: rgba(31, 47, 58, 0.9);  */
+    background: linear-gradient(90deg, #b64203, #9ceba3);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: white;
     max-width: 90%; 
     margin: 0 auto;
   }
@@ -80,14 +114,14 @@ body {
   .form-input {
     width: 100%;
     padding: 14px;
-    background-color: #1f2937;
-    color: white;
+    color:black;
     border: 2px solid #374151;
     border-radius: 8px;
     margin-bottom: 1rem;
+    cursor: pointer;
   }
   .form-input:focus {
-    border-color: #60a5fa;
+    border-color: #0568e0;
     outline: none;
   }
   .form-button {
@@ -115,5 +149,5 @@ body {
   }
   .contact-heading img {
     width: 200px;
-    height: 180px;
-  }
+    height: 180px;
+  }

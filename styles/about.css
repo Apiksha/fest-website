@@ -4,6 +4,40 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    
 }
+
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #6c3 50%, #FF5F00 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+
+
+
 body{
   
     background: linear-gradient(90deg, #faa170, #ebbf9c); 
@@ -11,6 +45,119 @@ body{
     background: linear-gradient(to bottom right, #f6d365,#fda085)
     
 }
+
+
+
+
+/* Main Section */
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px ;
+    gap:40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+/* Image Section */
+.image-container {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+.image-container img {
+    width: 400px;
+    max-width: 100%;
+    height: 380px;
+    border-radius: 10px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.vc-message {
+    font-size: 16px;
+    font-weight: bold;
+    color: green;
+    margin-top: 10px;
+}
+
+/* Text Section */
+.text-container {
+    flex: 2;
+    padding: 10px 20px;
+}
+
+.text-container h2 {
+    color: #002366;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.text-container p {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0066cc;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* animation part */
+.about-section {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-section {
+        margin-top: 90px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-container h2 {
+        font-size: 18px;
+    }
+
+    .text-container p {
+        font-size: 18px;
+    }
+
+    .read-more {
+        font-size: 14px;
+    }
+}
+
+/* main section end */
 
 
 .container {
@@ -361,6 +508,17 @@ img:hover{
     }
 }
 
+/* medai for small device text */
+@media (max-width: 420px){
+    .titiksha p, .Ekatva p, .srijin p, .tatva p, .reassurance p {
+        width: 100%;
+        max-width: 90%;
+        font-size: 17px;
+        margin: auto;
+    }
+}
+
+/* media quary for tourist section */
 @media (max-width: 768px) {
     .tourist {
         display: flex;
