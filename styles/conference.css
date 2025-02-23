@@ -75,7 +75,11 @@ body {
     }
 }
 
-
+/*Sponsor Logo*/
+.sponsor-logo {
+    max-width: 150px; /* Adjust the size as needed */
+    margin-bottom: 20px; /* Space between logo and text */
+}
 
 /* Conference Image and About section Styles */
 

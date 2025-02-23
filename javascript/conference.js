@@ -4,7 +4,7 @@ const speakers = [
         name: "Prof. Filipe Samuel Silva",
         title: "Professor, University of Minho, Portugal",
         subtitle: "CEO & Founder of Extremater Dental Solutions",
-        description: "Dr. Samuel earned his MSc and PhD from Minho University, Portugal. Named among “World’s Top 2% Scientists 2021” by Stanford and Elsevier, he specializes in materials science engineering, dentistry, oral surgery, metallurgy, and mechanics. He leads the CMEMS Laboratory of Micro Fabrication, holding five patents, publications, and six international awards.",
+        description: "Prof. Samuel earned his MSc and PhD from Minho University, Portugal. Named among “World’s Top 2% Scientists 2021” by Stanford and Elsevier, he specializes in materials science engineering, dentistry, oral surgery, metallurgy, and mechanics. He leads the CMEMS Laboratory of Micro Fabrication, holding five patents, publications, and six international awards.",
         image: "../images/Silva.jpeg"
     },
     {
@@ -17,7 +17,7 @@ const speakers = [
     {
         name: "Prof (Dr.) Anuj Kumar",
         title: "Head of Research, Rushford Business School, Switzerland",
-        description: "Dr. Kumar earned his M.Sc. at University College Dublin, Ireland, and his PhD from Aligarh Muslim University, India. Honored with an Outstanding Achiever award at MAHSA University, he serves as a Research Fellow at INTI International University. Specializing in marketing, international business, and management, he has received multiple prestigious awards.",
+        description: "Prof. Kumar earned his M.Sc. at University College Dublin, Ireland, and his PhD from Aligarh Muslim University, India. Honored with an Outstanding Achiever award at MAHSA University, he serves as a Research Fellow at INTI International University. Specializing in marketing, international business, and management, he has received multiple prestigious awards.",
         image: "../images/Anuj.jpeg"
     },
     
