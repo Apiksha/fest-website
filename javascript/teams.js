@@ -197,9 +197,9 @@ const schoolTeam=[
         }
     },
     
-    {name: "Shivam Kumar",
-        image: "../images/temp_photo.webp",
-        role: "SoEE (22bee)",
+    {name: "Shivam Chaudhary",
+        image: "../images/ShivamChaudhary.jpg",
+        role: "SoEE (22bee025)",
         position: "Coordinator",
         socialLinks: {
             linkedin: "https://www.linkedin.com/in/shivam-chaudhary-6428b5259/",
@@ -213,9 +213,9 @@ const schoolTeam=[
             linkedin: "https://www.linkedin.com/in/ashu-kumar-87202b25a/",
         }
     },
-    {name: "Shivam",
-        image: "../images/temp_photo.webp",
-        role: "SoECE ()",
+    {name: "Shivam Kumar",
+        image: "../images/ShivamKumar.jpg",
+        role: "SoECE (22bec083)",
         position: "Coordinator",
         socialLinks: {
             linkedin: "https://www.linkedin.com",
@@ -223,7 +223,7 @@ const schoolTeam=[
     },
     {name: "Ramnik Sharma",
         image: "../images/ramnik.jpg",
-        role: "SoECE ()",
+        role: "SoECE (21bec126)",
         position: "Ambassador",
         socialLinks: {
             linkedin: "https://www.linkedin.com",
@@ -264,8 +264,8 @@ const schoolTeam=[
         }
     },
     {name: "Ayush Pati Tripathi",
-        image: "../images/temp_photo.webp",
-        role: "SoM (24bmc)",
+        image: "../images/AyushPatiTripathi.jpeg",
+        role: "SoM (24bmc010)",
         position: "Coordinator",
         socialLinks: {
             linkedin: "https://www.linkedin.com",
@@ -281,23 +281,23 @@ const schoolTeam=[
     },
     {name: "Ankita Chaurasia",
         image: "../images/temp_photo.webp",
-        role: "SoALD (21)",
-        position: "",
+        role: "SoALD (22bar007)",
+        position: "Coordinator",
         socialLinks: {
             linkedin: "https://www.linkedin.com",
         }
     },
     {name: "Sadhvi Sharma",
-        image: "../images/temp_photo.webp",
-        role: "SoP ()",
-        position: "",
+        image: "../images/SadhviSharma.jpg",
+        role: "SoP (20iby030)",
+        position: "Coordinator",
         socialLinks: {
             linkedin: "https://www.linkedin.com",
         }
     },
     {name: "Variga Khajuria",
         image: "../images/variga.jpeg",
-        role: "SoLL ()",
+        role: "SoLL (21ibe035)",
         position: "Coordinator",
         socialLinks: {
             linkedin: "https://www.linkedin.com",
