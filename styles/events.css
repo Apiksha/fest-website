@@ -164,7 +164,6 @@ a {
   text-align: center;
   width: calc(25% - 20px);
   position: relative;
-  height: auto;
   border: 1px solid black;
   background-color: white;
 }
@@ -180,11 +179,6 @@ a {
   letter-spacing: .1em;
   text-transform: uppercase;
   font-size: 2rem;
-  /* background: linear-gradient(to top, #C84C05 1%, #D4D925 100%);
-  font-weight: bold;
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
   color: rgb(87, 24, 26);
   padding: 4rem 1rem 2rem;
 }
